@@ -269,6 +269,18 @@
 <span id="266">266</span>
 <span id="267">267</span>
 <span id="268">268</span>
+<span id="269">269</span>
+<span id="270">270</span>
+<span id="271">271</span>
+<span id="272">272</span>
+<span id="273">273</span>
+<span id="274">274</span>
+<span id="275">275</span>
+<span id="276">276</span>
+<span id="277">277</span>
+<span id="278">278</span>
+<span id="279">279</span>
+<span id="280">280</span>
 </pre><div class="example-wrap"><pre class="rust ">
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Reader of register SM3_SHIFTCTRL&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">R</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">R</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="kw">super</span>::<span class="ident">SM3_SHIFTCTRL</span><span class="op">&gt;</span>;
@@ -455,22 +467,28 @@
     }
 }
 <span class="kw">impl</span> <span class="ident">R</span> {
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 31 - When 1, RX FIFO steals the TX FIFO&#39;s storage, and becomes twice as deep.\\n TX FIFO is disabled as a result (always reads as both full and empty).\\n FIFOs are flushed when this bit is changed.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 31 - When 1, RX FIFO steals the TX FIFO&#39;s storage, and becomes twice as deep.  
+ TX FIFO is disabled as a result (always reads as both full and empty).  
+ FIFOs are flushed when this bit is changed.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">fjoin_rx</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">FJOIN_RX_R</span> {
         <span class="ident">FJOIN_RX_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">31</span>) <span class="op">&amp;</span> <span class="number">0x01</span>) <span class="op">!</span><span class="op">=</span> <span class="number">0</span>)
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 30 - When 1, TX FIFO steals the RX FIFO&#39;s storage, and becomes twice as deep.\\n RX FIFO is disabled as a result (always reads as both full and empty).\\n FIFOs are flushed when this bit is changed.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 30 - When 1, TX FIFO steals the RX FIFO&#39;s storage, and becomes twice as deep.  
+ RX FIFO is disabled as a result (always reads as both full and empty).  
+ FIFOs are flushed when this bit is changed.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">fjoin_tx</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">FJOIN_TX_R</span> {
         <span class="ident">FJOIN_TX_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">30</span>) <span class="op">&amp;</span> <span class="number">0x01</span>) <span class="op">!</span><span class="op">=</span> <span class="number">0</span>)
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 25:29 - Number of bits shifted out of TXSR before autopull or conditional pull.\\n Write 0 for value of 32.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 25:29 - Number of bits shifted out of TXSR before autopull or conditional pull.  
+ Write 0 for value of 32.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">pull_thresh</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">PULL_THRESH_R</span> {
         <span class="ident">PULL_THRESH_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">25</span>) <span class="op">&amp;</span> <span class="number">0x1f</span>) <span class="kw">as</span> <span class="ident">u8</span>)
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 20:24 - Number of bits shifted into RXSR before autopush or conditional push.\\n Write 0 for value of 32.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 20:24 - Number of bits shifted into RXSR before autopush or conditional push.  
+ Write 0 for value of 32.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">push_thresh</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">PUSH_THRESH_R</span> {
         <span class="ident">PUSH_THRESH_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">20</span>) <span class="op">&amp;</span> <span class="number">0x1f</span>) <span class="kw">as</span> <span class="ident">u8</span>)
@@ -497,22 +515,28 @@
     }
 }
 <span class="kw">impl</span> <span class="ident">W</span> {
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 31 - When 1, RX FIFO steals the TX FIFO&#39;s storage, and becomes twice as deep.\\n TX FIFO is disabled as a result (always reads as both full and empty).\\n FIFOs are flushed when this bit is changed.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 31 - When 1, RX FIFO steals the TX FIFO&#39;s storage, and becomes twice as deep.  
+ TX FIFO is disabled as a result (always reads as both full and empty).  
+ FIFOs are flushed when this bit is changed.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">fjoin_rx</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">FJOIN_RX_W</span> {
         <span class="ident">FJOIN_RX_W</span> { <span class="ident">w</span>: <span class="self">self</span> }
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 30 - When 1, TX FIFO steals the RX FIFO&#39;s storage, and becomes twice as deep.\\n RX FIFO is disabled as a result (always reads as both full and empty).\\n FIFOs are flushed when this bit is changed.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 30 - When 1, TX FIFO steals the RX FIFO&#39;s storage, and becomes twice as deep.  
+ RX FIFO is disabled as a result (always reads as both full and empty).  
+ FIFOs are flushed when this bit is changed.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">fjoin_tx</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">FJOIN_TX_W</span> {
         <span class="ident">FJOIN_TX_W</span> { <span class="ident">w</span>: <span class="self">self</span> }
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 25:29 - Number of bits shifted out of TXSR before autopull or conditional pull.\\n Write 0 for value of 32.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 25:29 - Number of bits shifted out of TXSR before autopull or conditional pull.  
+ Write 0 for value of 32.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">pull_thresh</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">PULL_THRESH_W</span> {
         <span class="ident">PULL_THRESH_W</span> { <span class="ident">w</span>: <span class="self">self</span> }
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 20:24 - Number of bits shifted into RXSR before autopush or conditional push.\\n Write 0 for value of 32.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 20:24 - Number of bits shifted into RXSR before autopush or conditional push.  
+ Write 0 for value of 32.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">push_thresh</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">PUSH_THRESH_W</span> {
         <span class="ident">PUSH_THRESH_W</span> { <span class="ident">w</span>: <span class="self">self</span> }

@@ -793,6 +793,96 @@
 <span id="790">790</span>
 <span id="791">791</span>
 <span id="792">792</span>
+<span id="793">793</span>
+<span id="794">794</span>
+<span id="795">795</span>
+<span id="796">796</span>
+<span id="797">797</span>
+<span id="798">798</span>
+<span id="799">799</span>
+<span id="800">800</span>
+<span id="801">801</span>
+<span id="802">802</span>
+<span id="803">803</span>
+<span id="804">804</span>
+<span id="805">805</span>
+<span id="806">806</span>
+<span id="807">807</span>
+<span id="808">808</span>
+<span id="809">809</span>
+<span id="810">810</span>
+<span id="811">811</span>
+<span id="812">812</span>
+<span id="813">813</span>
+<span id="814">814</span>
+<span id="815">815</span>
+<span id="816">816</span>
+<span id="817">817</span>
+<span id="818">818</span>
+<span id="819">819</span>
+<span id="820">820</span>
+<span id="821">821</span>
+<span id="822">822</span>
+<span id="823">823</span>
+<span id="824">824</span>
+<span id="825">825</span>
+<span id="826">826</span>
+<span id="827">827</span>
+<span id="828">828</span>
+<span id="829">829</span>
+<span id="830">830</span>
+<span id="831">831</span>
+<span id="832">832</span>
+<span id="833">833</span>
+<span id="834">834</span>
+<span id="835">835</span>
+<span id="836">836</span>
+<span id="837">837</span>
+<span id="838">838</span>
+<span id="839">839</span>
+<span id="840">840</span>
+<span id="841">841</span>
+<span id="842">842</span>
+<span id="843">843</span>
+<span id="844">844</span>
+<span id="845">845</span>
+<span id="846">846</span>
+<span id="847">847</span>
+<span id="848">848</span>
+<span id="849">849</span>
+<span id="850">850</span>
+<span id="851">851</span>
+<span id="852">852</span>
+<span id="853">853</span>
+<span id="854">854</span>
+<span id="855">855</span>
+<span id="856">856</span>
+<span id="857">857</span>
+<span id="858">858</span>
+<span id="859">859</span>
+<span id="860">860</span>
+<span id="861">861</span>
+<span id="862">862</span>
+<span id="863">863</span>
+<span id="864">864</span>
+<span id="865">865</span>
+<span id="866">866</span>
+<span id="867">867</span>
+<span id="868">868</span>
+<span id="869">869</span>
+<span id="870">870</span>
+<span id="871">871</span>
+<span id="872">872</span>
+<span id="873">873</span>
+<span id="874">874</span>
+<span id="875">875</span>
+<span id="876">876</span>
+<span id="877">877</span>
+<span id="878">878</span>
+<span id="879">879</span>
+<span id="880">880</span>
+<span id="881">881</span>
+<span id="882">882</span>
 </pre><div class="example-wrap"><pre class="rust ">
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Reader of register IC_CON&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">R</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">R</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="kw">super</span>::<span class="ident">IC_CON</span><span class="op">&gt;</span>;
@@ -808,7 +898,11 @@
 }
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Reader of field `STOP_DET_IF_MASTER_ACTIVE`&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">STOP_DET_IF_MASTER_ACTIVE_R</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">R</span><span class="op">&lt;</span><span class="ident">bool</span>, <span class="ident">bool</span><span class="op">&gt;</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;This bit controls whether DW_apb_i2c should hold the bus when the Rx FIFO is physically full to its RX_BUFFER_DEPTH, as described in the IC_RX_FULL_HLD_BUS_EN parameter.\\n\\n Reset value: 0x0.\n\nValue on reset: 0&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;This bit controls whether DW_apb_i2c should hold the bus when the Rx FIFO is physically full to its RX_BUFFER_DEPTH, as described in the IC_RX_FULL_HLD_BUS_EN parameter.
+
+ Reset value: 0x0.
+
+Value on reset: 0&quot;</span>]</span>
 <span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Clone</span>, <span class="ident">Copy</span>, <span class="ident">Debug</span>, <span class="ident">PartialEq</span>)]</span>
 <span class="kw">pub</span> <span class="kw">enum</span> <span class="ident">RX_FIFO_FULL_HLD_CTRL_A</span> {
     <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;0: Overflow when RX_FIFO is full&quot;</span>]</span>
@@ -883,7 +977,11 @@
         <span class="self">self</span>.<span class="ident">w</span>
     }
 }
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;This bit controls the generation of the TX_EMPTY interrupt, as described in the IC_RAW_INTR_STAT register.\\n\\n Reset value: 0x0.\n\nValue on reset: 0&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;This bit controls the generation of the TX_EMPTY interrupt, as described in the IC_RAW_INTR_STAT register.
+
+ Reset value: 0x0.
+
+Value on reset: 0&quot;</span>]</span>
 <span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Clone</span>, <span class="ident">Copy</span>, <span class="ident">Debug</span>, <span class="ident">PartialEq</span>)]</span>
 <span class="kw">pub</span> <span class="kw">enum</span> <span class="ident">TX_EMPTY_CTRL_A</span> {
     <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;0: Default behaviour of TX_EMPTY interrupt&quot;</span>]</span>
@@ -958,7 +1056,11 @@
         <span class="self">self</span>.<span class="ident">w</span>
     }
 }
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;In slave mode: - 1&#39;b1: issues the STOP_DET interrupt only when it is addressed. - 1&#39;b0: issues the STOP_DET irrespective of whether it&#39;s addressed or not. Reset value: 0x0\\n\\n NOTE: During a general call address, this slave does not issue the STOP_DET interrupt if STOP_DET_IF_ADDRESSED = 1&#39;b1, even if the slave responds to the general call address by generating ACK. The STOP_DET interrupt is generated only when the transmitted address matches the slave address (SAR).\n\nValue on reset: 0&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;In slave mode: - 1&#39;b1: issues the STOP_DET interrupt only when it is addressed. - 1&#39;b0: issues the STOP_DET irrespective of whether it&#39;s addressed or not. Reset value: 0x0
+
+ NOTE: During a general call address, this slave does not issue the STOP_DET interrupt if STOP_DET_IF_ADDRESSED = 1&#39;b1, even if the slave responds to the general call address by generating ACK. The STOP_DET interrupt is generated only when the transmitted address matches the slave address (SAR).
+
+Value on reset: 0&quot;</span>]</span>
 <span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Clone</span>, <span class="ident">Copy</span>, <span class="ident">Debug</span>, <span class="ident">PartialEq</span>)]</span>
 <span class="kw">pub</span> <span class="kw">enum</span> <span class="ident">STOP_DET_IFADDRESSED_A</span> {
     <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;0: slave issues STOP_DET intr always&quot;</span>]</span>
@@ -1033,7 +1135,13 @@
         <span class="self">self</span>.<span class="ident">w</span>
     }
 }
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;This bit controls whether I2C has its slave disabled, which means once the presetn signal is applied, then this bit is set and the slave is disabled.\\n\\n If this bit is set (slave is disabled), DW_apb_i2c functions only as a master and does not perform any action that requires a slave.\\n\\n NOTE: Software should ensure that if this bit is written with 0, then bit 0 should also be written with a 0.\n\nValue on reset: 1&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;This bit controls whether I2C has its slave disabled, which means once the presetn signal is applied, then this bit is set and the slave is disabled.
+
+ If this bit is set (slave is disabled), DW_apb_i2c functions only as a master and does not perform any action that requires a slave.
+
+ NOTE: Software should ensure that if this bit is written with 0, then bit 0 should also be written with a 0.
+
+Value on reset: 1&quot;</span>]</span>
 <span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Clone</span>, <span class="ident">Copy</span>, <span class="ident">Debug</span>, <span class="ident">PartialEq</span>)]</span>
 <span class="kw">pub</span> <span class="kw">enum</span> <span class="ident">IC_SLAVE_DISABLE_A</span> {
     <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;0: Slave mode is enabled&quot;</span>]</span>
@@ -1108,7 +1216,11 @@
         <span class="self">self</span>.<span class="ident">w</span>
     }
 }
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Determines whether RESTART conditions may be sent when acting as a master. Some older slaves do not support handling RESTART conditions; however, RESTART conditions are used in several DW_apb_i2c operations. When RESTART is disabled, the master is prohibited from performing the following functions: - Sending a START BYTE - Performing any high-speed mode operation - High-speed mode operation - Performing direction changes in combined format mode - Performing a read operation with a 10-bit address By replacing RESTART condition followed by a STOP and a subsequent START condition, split operations are broken down into multiple DW_apb_i2c transfers. If the above operations are performed, it will result in setting bit 6 (TX_ABRT) of the IC_RAW_INTR_STAT register.\\n\\n Reset value: ENABLED\n\nValue on reset: 1&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Determines whether RESTART conditions may be sent when acting as a master. Some older slaves do not support handling RESTART conditions; however, RESTART conditions are used in several DW_apb_i2c operations. When RESTART is disabled, the master is prohibited from performing the following functions: - Sending a START BYTE - Performing any high-speed mode operation - High-speed mode operation - Performing direction changes in combined format mode - Performing a read operation with a 10-bit address By replacing RESTART condition followed by a STOP and a subsequent START condition, split operations are broken down into multiple DW_apb_i2c transfers. If the above operations are performed, it will result in setting bit 6 (TX_ABRT) of the IC_RAW_INTR_STAT register.
+
+ Reset value: ENABLED
+
+Value on reset: 1&quot;</span>]</span>
 <span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Clone</span>, <span class="ident">Copy</span>, <span class="ident">Debug</span>, <span class="ident">PartialEq</span>)]</span>
 <span class="kw">pub</span> <span class="kw">enum</span> <span class="ident">IC_RESTART_EN_A</span> {
     <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;0: Master restart disabled&quot;</span>]</span>
@@ -1183,7 +1295,9 @@
         <span class="self">self</span>.<span class="ident">w</span>
     }
 }
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Controls whether the DW_apb_i2c starts its transfers in 7- or 10-bit addressing mode when acting as a master. - 0: 7-bit addressing - 1: 10-bit addressing\n\nValue on reset: 0&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Controls whether the DW_apb_i2c starts its transfers in 7- or 10-bit addressing mode when acting as a master. - 0: 7-bit addressing - 1: 10-bit addressing
+
+Value on reset: 0&quot;</span>]</span>
 <span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Clone</span>, <span class="ident">Copy</span>, <span class="ident">Debug</span>, <span class="ident">PartialEq</span>)]</span>
 <span class="kw">pub</span> <span class="kw">enum</span> <span class="ident">IC_10BITADDR_MASTER_A</span> {
     <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;0: Master 7Bit addressing mode&quot;</span>]</span>
@@ -1258,7 +1372,9 @@
         <span class="self">self</span>.<span class="ident">w</span>
     }
 }
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;When acting as a slave, this bit controls whether the DW_apb_i2c responds to 7- or 10-bit addresses. - 0: 7-bit addressing. The DW_apb_i2c ignores transactions that involve 10-bit addressing; for 7-bit addressing, only the lower 7 bits of the IC_SAR register are compared. - 1: 10-bit addressing. The DW_apb_i2c responds to only 10-bit addressing transfers that match the full 10 bits of the IC_SAR register.\n\nValue on reset: 0&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;When acting as a slave, this bit controls whether the DW_apb_i2c responds to 7- or 10-bit addresses. - 0: 7-bit addressing. The DW_apb_i2c ignores transactions that involve 10-bit addressing; for 7-bit addressing, only the lower 7 bits of the IC_SAR register are compared. - 1: 10-bit addressing. The DW_apb_i2c responds to only 10-bit addressing transfers that match the full 10 bits of the IC_SAR register.
+
+Value on reset: 0&quot;</span>]</span>
 <span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Clone</span>, <span class="ident">Copy</span>, <span class="ident">Debug</span>, <span class="ident">PartialEq</span>)]</span>
 <span class="kw">pub</span> <span class="kw">enum</span> <span class="ident">IC_10BITADDR_SLAVE_A</span> {
     <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;0: Slave 7Bit addressing&quot;</span>]</span>
@@ -1333,7 +1449,19 @@
         <span class="self">self</span>.<span class="ident">w</span>
     }
 }
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;These bits control at which speed the DW_apb_i2c operates; its setting is relevant only if one is operating the DW_apb_i2c in master mode. Hardware protects against illegal values being programmed by software. These bits must be programmed appropriately for slave mode also, as it is used to capture correct value of spike filter as per the speed mode.\\n\\n This register should be programmed only with a value in the range of 1 to IC_MAX_SPEED_MODE; otherwise, hardware updates this register with the value of IC_MAX_SPEED_MODE.\\n\\n 1: standard mode (100 kbit/s)\\n\\n 2: fast mode (&lt;=400 kbit/s) or fast mode plus (&lt;=1000Kbit/s)\\n\\n 3: high speed mode (3.4 Mbit/s)\\n\\n Note: This field is not applicable when IC_ULTRA_FAST_MODE=1\n\nValue on reset: 2&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;These bits control at which speed the DW_apb_i2c operates; its setting is relevant only if one is operating the DW_apb_i2c in master mode. Hardware protects against illegal values being programmed by software. These bits must be programmed appropriately for slave mode also, as it is used to capture correct value of spike filter as per the speed mode.
+
+ This register should be programmed only with a value in the range of 1 to IC_MAX_SPEED_MODE; otherwise, hardware updates this register with the value of IC_MAX_SPEED_MODE.
+
+ 1: standard mode (100 kbit/s)
+
+ 2: fast mode (&lt;=400 kbit/s) or fast mode plus (&lt;=1000Kbit/s)
+
+ 3: high speed mode (3.4 Mbit/s)
+
+ Note: This field is not applicable when IC_ULTRA_FAST_MODE=1
+
+Value on reset: 2&quot;</span>]</span>
 <span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Clone</span>, <span class="ident">Copy</span>, <span class="ident">Debug</span>, <span class="ident">PartialEq</span>)]</span>
 <span class="attribute">#[<span class="ident">repr</span>(<span class="ident">u8</span>)]</span>
 <span class="kw">pub</span> <span class="kw">enum</span> <span class="ident">SPEED_A</span> {
@@ -1412,7 +1540,11 @@
         <span class="self">self</span>.<span class="ident">w</span>
     }
 }
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;This bit controls whether the DW_apb_i2c master is enabled.\\n\\n NOTE: Software should ensure that if this bit is written with &#39;1&#39; then bit 6 should also be written with a &#39;1&#39;.\n\nValue on reset: 1&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;This bit controls whether the DW_apb_i2c master is enabled.
+
+ NOTE: Software should ensure that if this bit is written with &#39;1&#39; then bit 6 should also be written with a &#39;1&#39;.
+
+Value on reset: 1&quot;</span>]</span>
 <span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Clone</span>, <span class="ident">Copy</span>, <span class="ident">Debug</span>, <span class="ident">PartialEq</span>)]</span>
 <span class="kw">pub</span> <span class="kw">enum</span> <span class="ident">MASTER_MODE_A</span> {
     <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;0: Master mode is disabled&quot;</span>]</span>
@@ -1493,27 +1625,39 @@
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">stop_det_if_master_active</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">STOP_DET_IF_MASTER_ACTIVE_R</span> {
         <span class="ident">STOP_DET_IF_MASTER_ACTIVE_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">10</span>) <span class="op">&amp;</span> <span class="number">0x01</span>) <span class="op">!</span><span class="op">=</span> <span class="number">0</span>)
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 9 - This bit controls whether DW_apb_i2c should hold the bus when the Rx FIFO is physically full to its RX_BUFFER_DEPTH, as described in the IC_RX_FULL_HLD_BUS_EN parameter.\\n\\n Reset value: 0x0.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 9 - This bit controls whether DW_apb_i2c should hold the bus when the Rx FIFO is physically full to its RX_BUFFER_DEPTH, as described in the IC_RX_FULL_HLD_BUS_EN parameter.
+
+ Reset value: 0x0.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">rx_fifo_full_hld_ctrl</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">RX_FIFO_FULL_HLD_CTRL_R</span> {
         <span class="ident">RX_FIFO_FULL_HLD_CTRL_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">9</span>) <span class="op">&amp;</span> <span class="number">0x01</span>) <span class="op">!</span><span class="op">=</span> <span class="number">0</span>)
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 8 - This bit controls the generation of the TX_EMPTY interrupt, as described in the IC_RAW_INTR_STAT register.\\n\\n Reset value: 0x0.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 8 - This bit controls the generation of the TX_EMPTY interrupt, as described in the IC_RAW_INTR_STAT register.
+
+ Reset value: 0x0.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">tx_empty_ctrl</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">TX_EMPTY_CTRL_R</span> {
         <span class="ident">TX_EMPTY_CTRL_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">8</span>) <span class="op">&amp;</span> <span class="number">0x01</span>) <span class="op">!</span><span class="op">=</span> <span class="number">0</span>)
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 7 - In slave mode: - 1&#39;b1: issues the STOP_DET interrupt only when it is addressed. - 1&#39;b0: issues the STOP_DET irrespective of whether it&#39;s addressed or not. Reset value: 0x0\\n\\n NOTE: During a general call address, this slave does not issue the STOP_DET interrupt if STOP_DET_IF_ADDRESSED = 1&#39;b1, even if the slave responds to the general call address by generating ACK. The STOP_DET interrupt is generated only when the transmitted address matches the slave address (SAR).&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 7 - In slave mode: - 1&#39;b1: issues the STOP_DET interrupt only when it is addressed. - 1&#39;b0: issues the STOP_DET irrespective of whether it&#39;s addressed or not. Reset value: 0x0
+
+ NOTE: During a general call address, this slave does not issue the STOP_DET interrupt if STOP_DET_IF_ADDRESSED = 1&#39;b1, even if the slave responds to the general call address by generating ACK. The STOP_DET interrupt is generated only when the transmitted address matches the slave address (SAR).&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">stop_det_ifaddressed</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">STOP_DET_IFADDRESSED_R</span> {
         <span class="ident">STOP_DET_IFADDRESSED_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">7</span>) <span class="op">&amp;</span> <span class="number">0x01</span>) <span class="op">!</span><span class="op">=</span> <span class="number">0</span>)
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 6 - This bit controls whether I2C has its slave disabled, which means once the presetn signal is applied, then this bit is set and the slave is disabled.\\n\\n If this bit is set (slave is disabled), DW_apb_i2c functions only as a master and does not perform any action that requires a slave.\\n\\n NOTE: Software should ensure that if this bit is written with 0, then bit 0 should also be written with a 0.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 6 - This bit controls whether I2C has its slave disabled, which means once the presetn signal is applied, then this bit is set and the slave is disabled.
+
+ If this bit is set (slave is disabled), DW_apb_i2c functions only as a master and does not perform any action that requires a slave.
+
+ NOTE: Software should ensure that if this bit is written with 0, then bit 0 should also be written with a 0.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">ic_slave_disable</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">IC_SLAVE_DISABLE_R</span> {
         <span class="ident">IC_SLAVE_DISABLE_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">6</span>) <span class="op">&amp;</span> <span class="number">0x01</span>) <span class="op">!</span><span class="op">=</span> <span class="number">0</span>)
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 5 - Determines whether RESTART conditions may be sent when acting as a master. Some older slaves do not support handling RESTART conditions; however, RESTART conditions are used in several DW_apb_i2c operations. When RESTART is disabled, the master is prohibited from performing the following functions: - Sending a START BYTE - Performing any high-speed mode operation - High-speed mode operation - Performing direction changes in combined format mode - Performing a read operation with a 10-bit address By replacing RESTART condition followed by a STOP and a subsequent START condition, split operations are broken down into multiple DW_apb_i2c transfers. If the above operations are performed, it will result in setting bit 6 (TX_ABRT) of the IC_RAW_INTR_STAT register.\\n\\n Reset value: ENABLED&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 5 - Determines whether RESTART conditions may be sent when acting as a master. Some older slaves do not support handling RESTART conditions; however, RESTART conditions are used in several DW_apb_i2c operations. When RESTART is disabled, the master is prohibited from performing the following functions: - Sending a START BYTE - Performing any high-speed mode operation - High-speed mode operation - Performing direction changes in combined format mode - Performing a read operation with a 10-bit address By replacing RESTART condition followed by a STOP and a subsequent START condition, split operations are broken down into multiple DW_apb_i2c transfers. If the above operations are performed, it will result in setting bit 6 (TX_ABRT) of the IC_RAW_INTR_STAT register.
+
+ Reset value: ENABLED&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">ic_restart_en</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">IC_RESTART_EN_R</span> {
         <span class="ident">IC_RESTART_EN_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">5</span>) <span class="op">&amp;</span> <span class="number">0x01</span>) <span class="op">!</span><span class="op">=</span> <span class="number">0</span>)
@@ -1528,39 +1672,63 @@
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">ic_10bitaddr_slave</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">IC_10BITADDR_SLAVE_R</span> {
         <span class="ident">IC_10BITADDR_SLAVE_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">3</span>) <span class="op">&amp;</span> <span class="number">0x01</span>) <span class="op">!</span><span class="op">=</span> <span class="number">0</span>)
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 1:2 - These bits control at which speed the DW_apb_i2c operates; its setting is relevant only if one is operating the DW_apb_i2c in master mode. Hardware protects against illegal values being programmed by software. These bits must be programmed appropriately for slave mode also, as it is used to capture correct value of spike filter as per the speed mode.\\n\\n This register should be programmed only with a value in the range of 1 to IC_MAX_SPEED_MODE; otherwise, hardware updates this register with the value of IC_MAX_SPEED_MODE.\\n\\n 1: standard mode (100 kbit/s)\\n\\n 2: fast mode (&lt;=400 kbit/s) or fast mode plus (&lt;=1000Kbit/s)\\n\\n 3: high speed mode (3.4 Mbit/s)\\n\\n Note: This field is not applicable when IC_ULTRA_FAST_MODE=1&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 1:2 - These bits control at which speed the DW_apb_i2c operates; its setting is relevant only if one is operating the DW_apb_i2c in master mode. Hardware protects against illegal values being programmed by software. These bits must be programmed appropriately for slave mode also, as it is used to capture correct value of spike filter as per the speed mode.
+
+ This register should be programmed only with a value in the range of 1 to IC_MAX_SPEED_MODE; otherwise, hardware updates this register with the value of IC_MAX_SPEED_MODE.
+
+ 1: standard mode (100 kbit/s)
+
+ 2: fast mode (&lt;=400 kbit/s) or fast mode plus (&lt;=1000Kbit/s)
+
+ 3: high speed mode (3.4 Mbit/s)
+
+ Note: This field is not applicable when IC_ULTRA_FAST_MODE=1&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">speed</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">SPEED_R</span> {
         <span class="ident">SPEED_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">1</span>) <span class="op">&amp;</span> <span class="number">0x03</span>) <span class="kw">as</span> <span class="ident">u8</span>)
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 0 - This bit controls whether the DW_apb_i2c master is enabled.\\n\\n NOTE: Software should ensure that if this bit is written with &#39;1&#39; then bit 6 should also be written with a &#39;1&#39;.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 0 - This bit controls whether the DW_apb_i2c master is enabled.
+
+ NOTE: Software should ensure that if this bit is written with &#39;1&#39; then bit 6 should also be written with a &#39;1&#39;.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">master_mode</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">MASTER_MODE_R</span> {
         <span class="ident">MASTER_MODE_R</span>::<span class="ident">new</span>((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&amp;</span> <span class="number">0x01</span>) <span class="op">!</span><span class="op">=</span> <span class="number">0</span>)
     }
 }
 <span class="kw">impl</span> <span class="ident">W</span> {
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 9 - This bit controls whether DW_apb_i2c should hold the bus when the Rx FIFO is physically full to its RX_BUFFER_DEPTH, as described in the IC_RX_FULL_HLD_BUS_EN parameter.\\n\\n Reset value: 0x0.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 9 - This bit controls whether DW_apb_i2c should hold the bus when the Rx FIFO is physically full to its RX_BUFFER_DEPTH, as described in the IC_RX_FULL_HLD_BUS_EN parameter.
+
+ Reset value: 0x0.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">rx_fifo_full_hld_ctrl</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">RX_FIFO_FULL_HLD_CTRL_W</span> {
         <span class="ident">RX_FIFO_FULL_HLD_CTRL_W</span> { <span class="ident">w</span>: <span class="self">self</span> }
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 8 - This bit controls the generation of the TX_EMPTY interrupt, as described in the IC_RAW_INTR_STAT register.\\n\\n Reset value: 0x0.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 8 - This bit controls the generation of the TX_EMPTY interrupt, as described in the IC_RAW_INTR_STAT register.
+
+ Reset value: 0x0.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">tx_empty_ctrl</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">TX_EMPTY_CTRL_W</span> {
         <span class="ident">TX_EMPTY_CTRL_W</span> { <span class="ident">w</span>: <span class="self">self</span> }
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 7 - In slave mode: - 1&#39;b1: issues the STOP_DET interrupt only when it is addressed. - 1&#39;b0: issues the STOP_DET irrespective of whether it&#39;s addressed or not. Reset value: 0x0\\n\\n NOTE: During a general call address, this slave does not issue the STOP_DET interrupt if STOP_DET_IF_ADDRESSED = 1&#39;b1, even if the slave responds to the general call address by generating ACK. The STOP_DET interrupt is generated only when the transmitted address matches the slave address (SAR).&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 7 - In slave mode: - 1&#39;b1: issues the STOP_DET interrupt only when it is addressed. - 1&#39;b0: issues the STOP_DET irrespective of whether it&#39;s addressed or not. Reset value: 0x0
+
+ NOTE: During a general call address, this slave does not issue the STOP_DET interrupt if STOP_DET_IF_ADDRESSED = 1&#39;b1, even if the slave responds to the general call address by generating ACK. The STOP_DET interrupt is generated only when the transmitted address matches the slave address (SAR).&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">stop_det_ifaddressed</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">STOP_DET_IFADDRESSED_W</span> {
         <span class="ident">STOP_DET_IFADDRESSED_W</span> { <span class="ident">w</span>: <span class="self">self</span> }
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 6 - This bit controls whether I2C has its slave disabled, which means once the presetn signal is applied, then this bit is set and the slave is disabled.\\n\\n If this bit is set (slave is disabled), DW_apb_i2c functions only as a master and does not perform any action that requires a slave.\\n\\n NOTE: Software should ensure that if this bit is written with 0, then bit 0 should also be written with a 0.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 6 - This bit controls whether I2C has its slave disabled, which means once the presetn signal is applied, then this bit is set and the slave is disabled.
+
+ If this bit is set (slave is disabled), DW_apb_i2c functions only as a master and does not perform any action that requires a slave.
+
+ NOTE: Software should ensure that if this bit is written with 0, then bit 0 should also be written with a 0.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">ic_slave_disable</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">IC_SLAVE_DISABLE_W</span> {
         <span class="ident">IC_SLAVE_DISABLE_W</span> { <span class="ident">w</span>: <span class="self">self</span> }
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 5 - Determines whether RESTART conditions may be sent when acting as a master. Some older slaves do not support handling RESTART conditions; however, RESTART conditions are used in several DW_apb_i2c operations. When RESTART is disabled, the master is prohibited from performing the following functions: - Sending a START BYTE - Performing any high-speed mode operation - High-speed mode operation - Performing direction changes in combined format mode - Performing a read operation with a 10-bit address By replacing RESTART condition followed by a STOP and a subsequent START condition, split operations are broken down into multiple DW_apb_i2c transfers. If the above operations are performed, it will result in setting bit 6 (TX_ABRT) of the IC_RAW_INTR_STAT register.\\n\\n Reset value: ENABLED&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 5 - Determines whether RESTART conditions may be sent when acting as a master. Some older slaves do not support handling RESTART conditions; however, RESTART conditions are used in several DW_apb_i2c operations. When RESTART is disabled, the master is prohibited from performing the following functions: - Sending a START BYTE - Performing any high-speed mode operation - High-speed mode operation - Performing direction changes in combined format mode - Performing a read operation with a 10-bit address By replacing RESTART condition followed by a STOP and a subsequent START condition, split operations are broken down into multiple DW_apb_i2c transfers. If the above operations are performed, it will result in setting bit 6 (TX_ABRT) of the IC_RAW_INTR_STAT register.
+
+ Reset value: ENABLED&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">ic_restart_en</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">IC_RESTART_EN_W</span> {
         <span class="ident">IC_RESTART_EN_W</span> { <span class="ident">w</span>: <span class="self">self</span> }
@@ -1575,12 +1743,24 @@
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">ic_10bitaddr_slave</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">IC_10BITADDR_SLAVE_W</span> {
         <span class="ident">IC_10BITADDR_SLAVE_W</span> { <span class="ident">w</span>: <span class="self">self</span> }
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 1:2 - These bits control at which speed the DW_apb_i2c operates; its setting is relevant only if one is operating the DW_apb_i2c in master mode. Hardware protects against illegal values being programmed by software. These bits must be programmed appropriately for slave mode also, as it is used to capture correct value of spike filter as per the speed mode.\\n\\n This register should be programmed only with a value in the range of 1 to IC_MAX_SPEED_MODE; otherwise, hardware updates this register with the value of IC_MAX_SPEED_MODE.\\n\\n 1: standard mode (100 kbit/s)\\n\\n 2: fast mode (&lt;=400 kbit/s) or fast mode plus (&lt;=1000Kbit/s)\\n\\n 3: high speed mode (3.4 Mbit/s)\\n\\n Note: This field is not applicable when IC_ULTRA_FAST_MODE=1&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 1:2 - These bits control at which speed the DW_apb_i2c operates; its setting is relevant only if one is operating the DW_apb_i2c in master mode. Hardware protects against illegal values being programmed by software. These bits must be programmed appropriately for slave mode also, as it is used to capture correct value of spike filter as per the speed mode.
+
+ This register should be programmed only with a value in the range of 1 to IC_MAX_SPEED_MODE; otherwise, hardware updates this register with the value of IC_MAX_SPEED_MODE.
+
+ 1: standard mode (100 kbit/s)
+
+ 2: fast mode (&lt;=400 kbit/s) or fast mode plus (&lt;=1000Kbit/s)
+
+ 3: high speed mode (3.4 Mbit/s)
+
+ Note: This field is not applicable when IC_ULTRA_FAST_MODE=1&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">speed</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">SPEED_W</span> {
         <span class="ident">SPEED_W</span> { <span class="ident">w</span>: <span class="self">self</span> }
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 0 - This bit controls whether the DW_apb_i2c master is enabled.\\n\\n NOTE: Software should ensure that if this bit is written with &#39;1&#39; then bit 6 should also be written with a &#39;1&#39;.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 0 - This bit controls whether the DW_apb_i2c master is enabled.
+
+ NOTE: Software should ensure that if this bit is written with &#39;1&#39; then bit 6 should also be written with a &#39;1&#39;.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">master_mode</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">MASTER_MODE_W</span> {
         <span class="ident">MASTER_MODE_W</span> { <span class="ident">w</span>: <span class="self">self</span> }

@@ -119,6 +119,34 @@
 <span id="116">116</span>
 <span id="117">117</span>
 <span id="118">118</span>
+<span id="119">119</span>
+<span id="120">120</span>
+<span id="121">121</span>
+<span id="122">122</span>
+<span id="123">123</span>
+<span id="124">124</span>
+<span id="125">125</span>
+<span id="126">126</span>
+<span id="127">127</span>
+<span id="128">128</span>
+<span id="129">129</span>
+<span id="130">130</span>
+<span id="131">131</span>
+<span id="132">132</span>
+<span id="133">133</span>
+<span id="134">134</span>
+<span id="135">135</span>
+<span id="136">136</span>
+<span id="137">137</span>
+<span id="138">138</span>
+<span id="139">139</span>
+<span id="140">140</span>
+<span id="141">141</span>
+<span id="142">142</span>
+<span id="143">143</span>
+<span id="144">144</span>
+<span id="145">145</span>
+<span id="146">146</span>
 </pre><div class="example-wrap"><pre class="rust ">
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Reader of register CTRL&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">R</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">R</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="kw">super</span>::<span class="ident">CTRL</span><span class="op">&gt;</span>;
@@ -205,34 +233,62 @@
     }
 }
 <span class="kw">impl</span> <span class="ident">R</span> {
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 3 - When 1, the cache memories are powered down. They retain state,\\n but can not be accessed. This reduces static power dissipation.\\n Writing 1 to this bit forces CTRL_EN to 0, i.e. the cache cannot\\n be enabled when powered down.\\n Cache-as-SRAM accesses will produce a bus error response when\\n the cache is powered down.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 3 - When 1, the cache memories are powered down. They retain state,  
+ but can not be accessed. This reduces static power dissipation.  
+ Writing 1 to this bit forces CTRL_EN to 0, i.e. the cache cannot  
+ be enabled when powered down.  
+ Cache-as-SRAM accesses will produce a bus error response when  
+ the cache is powered down.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">power_down</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">POWER_DOWN_R</span> {
         <span class="ident">POWER_DOWN_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">3</span>) <span class="op">&amp;</span> <span class="number">0x01</span>) <span class="op">!</span><span class="op">=</span> <span class="number">0</span>)
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 1 - When 1, writes to any alias other than 0x0 (caching, allocating)\\n will produce a bus fault. When 0, these writes are silently ignored.\\n In either case, writes to the 0x0 alias will deallocate on tag match,\\n as usual.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 1 - When 1, writes to any alias other than 0x0 (caching, allocating)  
+ will produce a bus fault. When 0, these writes are silently ignored.  
+ In either case, writes to the 0x0 alias will deallocate on tag match,  
+ as usual.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">err_badwrite</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">ERR_BADWRITE_R</span> {
         <span class="ident">ERR_BADWRITE_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">1</span>) <span class="op">&amp;</span> <span class="number">0x01</span>) <span class="op">!</span><span class="op">=</span> <span class="number">0</span>)
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 0 - When 1, enable the cache. When the cache is disabled, all XIP accesses\\n will go straight to the flash, without querying the cache. When enabled,\\n cacheable XIP accesses will query the cache, and the flash will\\n not be accessed if the tag matches and the valid bit is set.\\n\\n If the cache is enabled, cache-as-SRAM accesses have no effect on the\\n cache data RAM, and will produce a bus error response.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 0 - When 1, enable the cache. When the cache is disabled, all XIP accesses  
+ will go straight to the flash, without querying the cache. When enabled,  
+ cacheable XIP accesses will query the cache, and the flash will  
+ not be accessed if the tag matches and the valid bit is set.
+
+ If the cache is enabled, cache-as-SRAM accesses have no effect on the  
+ cache data RAM, and will produce a bus error response.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">en</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">EN_R</span> {
         <span class="ident">EN_R</span>::<span class="ident">new</span>((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&amp;</span> <span class="number">0x01</span>) <span class="op">!</span><span class="op">=</span> <span class="number">0</span>)
     }
 }
 <span class="kw">impl</span> <span class="ident">W</span> {
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 3 - When 1, the cache memories are powered down. They retain state,\\n but can not be accessed. This reduces static power dissipation.\\n Writing 1 to this bit forces CTRL_EN to 0, i.e. the cache cannot\\n be enabled when powered down.\\n Cache-as-SRAM accesses will produce a bus error response when\\n the cache is powered down.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 3 - When 1, the cache memories are powered down. They retain state,  
+ but can not be accessed. This reduces static power dissipation.  
+ Writing 1 to this bit forces CTRL_EN to 0, i.e. the cache cannot  
+ be enabled when powered down.  
+ Cache-as-SRAM accesses will produce a bus error response when  
+ the cache is powered down.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">power_down</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">POWER_DOWN_W</span> {
         <span class="ident">POWER_DOWN_W</span> { <span class="ident">w</span>: <span class="self">self</span> }
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 1 - When 1, writes to any alias other than 0x0 (caching, allocating)\\n will produce a bus fault. When 0, these writes are silently ignored.\\n In either case, writes to the 0x0 alias will deallocate on tag match,\\n as usual.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 1 - When 1, writes to any alias other than 0x0 (caching, allocating)  
+ will produce a bus fault. When 0, these writes are silently ignored.  
+ In either case, writes to the 0x0 alias will deallocate on tag match,  
+ as usual.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">err_badwrite</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">ERR_BADWRITE_W</span> {
         <span class="ident">ERR_BADWRITE_W</span> { <span class="ident">w</span>: <span class="self">self</span> }
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 0 - When 1, enable the cache. When the cache is disabled, all XIP accesses\\n will go straight to the flash, without querying the cache. When enabled,\\n cacheable XIP accesses will query the cache, and the flash will\\n not be accessed if the tag matches and the valid bit is set.\\n\\n If the cache is enabled, cache-as-SRAM accesses have no effect on the\\n cache data RAM, and will produce a bus error response.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 0 - When 1, enable the cache. When the cache is disabled, all XIP accesses  
+ will go straight to the flash, without querying the cache. When enabled,  
+ cacheable XIP accesses will query the cache, and the flash will  
+ not be accessed if the tag matches and the valid bit is set.
+
+ If the cache is enabled, cache-as-SRAM accesses have no effect on the  
+ cache data RAM, and will produce a bus error response.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">en</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">EN_W</span> {
         <span class="ident">EN_W</span> { <span class="ident">w</span>: <span class="self">self</span> }

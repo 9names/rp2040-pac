@@ -249,6 +249,16 @@
 <span id="246">246</span>
 <span id="247">247</span>
 <span id="248">248</span>
+<span id="249">249</span>
+<span id="250">250</span>
+<span id="251">251</span>
+<span id="252">252</span>
+<span id="253">253</span>
+<span id="254">254</span>
+<span id="255">255</span>
+<span id="256">256</span>
+<span id="257">257</span>
+<span id="258">258</span>
 </pre><div class="example-wrap"><pre class="rust ">
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Reader of register INTERP0_CTRL_LANE1&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">R</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">R</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="kw">super</span>::<span class="ident">INTERP0_CTRL_LANE1</span><span class="op">&gt;</span>;
@@ -415,7 +425,9 @@
     }
 }
 <span class="kw">impl</span> <span class="ident">R</span> {
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 19:20 - ORed into bits 29:28 of the lane result presented to the processor on the bus.\\n No effect on the internal 32-bit datapath. Handy for using a lane to generate sequence\\n of pointers into flash or SRAM.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 19:20 - ORed into bits 29:28 of the lane result presented to the processor on the bus.  
+ No effect on the internal 32-bit datapath. Handy for using a lane to generate sequence  
+ of pointers into flash or SRAM.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">force_msb</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">FORCE_MSB_R</span> {
         <span class="ident">FORCE_MSB_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">19</span>) <span class="op">&amp;</span> <span class="number">0x03</span>) <span class="kw">as</span> <span class="ident">u8</span>)
@@ -430,17 +442,20 @@
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">cross_result</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">CROSS_RESULT_R</span> {
         <span class="ident">CROSS_RESULT_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">17</span>) <span class="op">&amp;</span> <span class="number">0x01</span>) <span class="op">!</span><span class="op">=</span> <span class="number">0</span>)
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 16 - If 1, feed the opposite lane&#39;s accumulator into this lane&#39;s shift + mask hardware.\\n Takes effect even if ADD_RAW is set (the CROSS_INPUT mux is before the shift+mask bypass)&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 16 - If 1, feed the opposite lane&#39;s accumulator into this lane&#39;s shift + mask hardware.  
+ Takes effect even if ADD_RAW is set (the CROSS_INPUT mux is before the shift+mask bypass)&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">cross_input</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">CROSS_INPUT_R</span> {
         <span class="ident">CROSS_INPUT_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">16</span>) <span class="op">&amp;</span> <span class="number">0x01</span>) <span class="op">!</span><span class="op">=</span> <span class="number">0</span>)
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 15 - If SIGNED is set, the shifted and masked accumulator value is sign-extended to 32 bits\\n before adding to BASE1, and LANE1 PEEK/POP appear extended to 32 bits when read by processor.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 15 - If SIGNED is set, the shifted and masked accumulator value is sign-extended to 32 bits  
+ before adding to BASE1, and LANE1 PEEK/POP appear extended to 32 bits when read by processor.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">signed</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">SIGNED_R</span> {
         <span class="ident">SIGNED_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">15</span>) <span class="op">&amp;</span> <span class="number">0x01</span>) <span class="op">!</span><span class="op">=</span> <span class="number">0</span>)
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 10:14 - The most-significant bit allowed to pass by the mask (inclusive)\\n Setting MSB &lt; LSB may cause chip to turn inside-out&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 10:14 - The most-significant bit allowed to pass by the mask (inclusive)  
+ Setting MSB &lt; LSB may cause chip to turn inside-out&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">mask_msb</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">MASK_MSB_R</span> {
         <span class="ident">MASK_MSB_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">10</span>) <span class="op">&amp;</span> <span class="number">0x1f</span>) <span class="kw">as</span> <span class="ident">u8</span>)
@@ -457,7 +472,9 @@
     }
 }
 <span class="kw">impl</span> <span class="ident">W</span> {
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 19:20 - ORed into bits 29:28 of the lane result presented to the processor on the bus.\\n No effect on the internal 32-bit datapath. Handy for using a lane to generate sequence\\n of pointers into flash or SRAM.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 19:20 - ORed into bits 29:28 of the lane result presented to the processor on the bus.  
+ No effect on the internal 32-bit datapath. Handy for using a lane to generate sequence  
+ of pointers into flash or SRAM.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">force_msb</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">FORCE_MSB_W</span> {
         <span class="ident">FORCE_MSB_W</span> { <span class="ident">w</span>: <span class="self">self</span> }
@@ -472,17 +489,20 @@
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">cross_result</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">CROSS_RESULT_W</span> {
         <span class="ident">CROSS_RESULT_W</span> { <span class="ident">w</span>: <span class="self">self</span> }
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 16 - If 1, feed the opposite lane&#39;s accumulator into this lane&#39;s shift + mask hardware.\\n Takes effect even if ADD_RAW is set (the CROSS_INPUT mux is before the shift+mask bypass)&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 16 - If 1, feed the opposite lane&#39;s accumulator into this lane&#39;s shift + mask hardware.  
+ Takes effect even if ADD_RAW is set (the CROSS_INPUT mux is before the shift+mask bypass)&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">cross_input</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">CROSS_INPUT_W</span> {
         <span class="ident">CROSS_INPUT_W</span> { <span class="ident">w</span>: <span class="self">self</span> }
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 15 - If SIGNED is set, the shifted and masked accumulator value is sign-extended to 32 bits\\n before adding to BASE1, and LANE1 PEEK/POP appear extended to 32 bits when read by processor.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 15 - If SIGNED is set, the shifted and masked accumulator value is sign-extended to 32 bits  
+ before adding to BASE1, and LANE1 PEEK/POP appear extended to 32 bits when read by processor.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">signed</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">SIGNED_W</span> {
         <span class="ident">SIGNED_W</span> { <span class="ident">w</span>: <span class="self">self</span> }
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 10:14 - The most-significant bit allowed to pass by the mask (inclusive)\\n Setting MSB &lt; LSB may cause chip to turn inside-out&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 10:14 - The most-significant bit allowed to pass by the mask (inclusive)  
+ Setting MSB &lt; LSB may cause chip to turn inside-out&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">mask_msb</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">MASK_MSB_W</span> {
         <span class="ident">MASK_MSB_W</span> { <span class="ident">w</span>: <span class="self">self</span> }

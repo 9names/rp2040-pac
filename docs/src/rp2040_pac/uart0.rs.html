@@ -272,6 +272,94 @@
 <span id="269">269</span>
 <span id="270">270</span>
 <span id="271">271</span>
+<span id="272">272</span>
+<span id="273">273</span>
+<span id="274">274</span>
+<span id="275">275</span>
+<span id="276">276</span>
+<span id="277">277</span>
+<span id="278">278</span>
+<span id="279">279</span>
+<span id="280">280</span>
+<span id="281">281</span>
+<span id="282">282</span>
+<span id="283">283</span>
+<span id="284">284</span>
+<span id="285">285</span>
+<span id="286">286</span>
+<span id="287">287</span>
+<span id="288">288</span>
+<span id="289">289</span>
+<span id="290">290</span>
+<span id="291">291</span>
+<span id="292">292</span>
+<span id="293">293</span>
+<span id="294">294</span>
+<span id="295">295</span>
+<span id="296">296</span>
+<span id="297">297</span>
+<span id="298">298</span>
+<span id="299">299</span>
+<span id="300">300</span>
+<span id="301">301</span>
+<span id="302">302</span>
+<span id="303">303</span>
+<span id="304">304</span>
+<span id="305">305</span>
+<span id="306">306</span>
+<span id="307">307</span>
+<span id="308">308</span>
+<span id="309">309</span>
+<span id="310">310</span>
+<span id="311">311</span>
+<span id="312">312</span>
+<span id="313">313</span>
+<span id="314">314</span>
+<span id="315">315</span>
+<span id="316">316</span>
+<span id="317">317</span>
+<span id="318">318</span>
+<span id="319">319</span>
+<span id="320">320</span>
+<span id="321">321</span>
+<span id="322">322</span>
+<span id="323">323</span>
+<span id="324">324</span>
+<span id="325">325</span>
+<span id="326">326</span>
+<span id="327">327</span>
+<span id="328">328</span>
+<span id="329">329</span>
+<span id="330">330</span>
+<span id="331">331</span>
+<span id="332">332</span>
+<span id="333">333</span>
+<span id="334">334</span>
+<span id="335">335</span>
+<span id="336">336</span>
+<span id="337">337</span>
+<span id="338">338</span>
+<span id="339">339</span>
+<span id="340">340</span>
+<span id="341">341</span>
+<span id="342">342</span>
+<span id="343">343</span>
+<span id="344">344</span>
+<span id="345">345</span>
+<span id="346">346</span>
+<span id="347">347</span>
+<span id="348">348</span>
+<span id="349">349</span>
+<span id="350">350</span>
+<span id="351">351</span>
+<span id="352">352</span>
+<span id="353">353</span>
+<span id="354">354</span>
+<span id="355">355</span>
+<span id="356">356</span>
+<span id="357">357</span>
+<span id="358">358</span>
+<span id="359">359</span>
 </pre><div class="example-wrap"><pre class="rust ">
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">r&quot;Register block&quot;</span>]</span>
 <span class="attribute">#[<span class="ident">repr</span>(<span class="ident">C</span>)]</span>
@@ -324,7 +412,11 @@
     <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;0xffc - UARTPCellID3 Register&quot;</span>]</span>
     <span class="kw">pub</span> <span class="ident">uartpcellid3</span>: <span class="ident">UARTPCELLID3</span>,
 }
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Data Register, UARTDR\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartdr](uartdr) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Data Register, UARTDR
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [uartdr](uartdr) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">UARTDR</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_UARTDR</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -335,7 +427,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Writable</span> <span class="kw">for</span> <span class="ident">UARTDR</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Data Register, UARTDR&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">uartdr</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Receive Status Register/Error Clear Register, UARTRSR/UARTECR\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartrsr](uartrsr) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Receive Status Register/Error Clear Register, UARTRSR/UARTECR
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [uartrsr](uartrsr) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">UARTRSR</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_UARTRSR</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -346,7 +442,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Writable</span> <span class="kw">for</span> <span class="ident">UARTRSR</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Receive Status Register/Error Clear Register, UARTRSR/UARTECR&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">uartrsr</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Flag Register, UARTFR\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartfr](uartfr) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Flag Register, UARTFR
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [uartfr](uartfr) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">UARTFR</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_UARTFR</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -355,7 +455,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Readable</span> <span class="kw">for</span> <span class="ident">UARTFR</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Flag Register, UARTFR&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">uartfr</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;IrDA Low-Power Counter Register, UARTILPR\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartilpr](uartilpr) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;IrDA Low-Power Counter Register, UARTILPR
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [uartilpr](uartilpr) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">UARTILPR</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_UARTILPR</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -366,7 +470,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Writable</span> <span class="kw">for</span> <span class="ident">UARTILPR</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;IrDA Low-Power Counter Register, UARTILPR&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">uartilpr</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Integer Baud Rate Register, UARTIBRD\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartibrd](uartibrd) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Integer Baud Rate Register, UARTIBRD
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [uartibrd](uartibrd) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">UARTIBRD</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_UARTIBRD</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -377,7 +485,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Writable</span> <span class="kw">for</span> <span class="ident">UARTIBRD</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Integer Baud Rate Register, UARTIBRD&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">uartibrd</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Fractional Baud Rate Register, UARTFBRD\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartfbrd](uartfbrd) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Fractional Baud Rate Register, UARTFBRD
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [uartfbrd](uartfbrd) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">UARTFBRD</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_UARTFBRD</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -388,7 +500,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Writable</span> <span class="kw">for</span> <span class="ident">UARTFBRD</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Fractional Baud Rate Register, UARTFBRD&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">uartfbrd</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Line Control Register, UARTLCR_H\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartlcr_h](uartlcr_h) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Line Control Register, UARTLCR_H
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [uartlcr_h](uartlcr_h) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">UARTLCR_H</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_UARTLCR_H</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -399,7 +515,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Writable</span> <span class="kw">for</span> <span class="ident">UARTLCR_H</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Line Control Register, UARTLCR_H&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">uartlcr_h</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Control Register, UARTCR\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartcr](uartcr) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Control Register, UARTCR
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [uartcr](uartcr) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">UARTCR</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_UARTCR</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -410,7 +530,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Writable</span> <span class="kw">for</span> <span class="ident">UARTCR</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Control Register, UARTCR&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">uartcr</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt FIFO Level Select Register, UARTIFLS\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartifls](uartifls) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt FIFO Level Select Register, UARTIFLS
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [uartifls](uartifls) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">UARTIFLS</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_UARTIFLS</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -421,7 +545,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Writable</span> <span class="kw">for</span> <span class="ident">UARTIFLS</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt FIFO Level Select Register, UARTIFLS&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">uartifls</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt Mask Set/Clear Register, UARTIMSC\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartimsc](uartimsc) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt Mask Set/Clear Register, UARTIMSC
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [uartimsc](uartimsc) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">UARTIMSC</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_UARTIMSC</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -432,7 +560,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Writable</span> <span class="kw">for</span> <span class="ident">UARTIMSC</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt Mask Set/Clear Register, UARTIMSC&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">uartimsc</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Raw Interrupt Status Register, UARTRIS\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartris](uartris) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Raw Interrupt Status Register, UARTRIS
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [uartris](uartris) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">UARTRIS</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_UARTRIS</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -441,7 +573,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Readable</span> <span class="kw">for</span> <span class="ident">UARTRIS</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Raw Interrupt Status Register, UARTRIS&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">uartris</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Masked Interrupt Status Register, UARTMIS\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartmis](uartmis) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Masked Interrupt Status Register, UARTMIS
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [uartmis](uartmis) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">UARTMIS</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_UARTMIS</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -450,7 +586,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Readable</span> <span class="kw">for</span> <span class="ident">UARTMIS</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Masked Interrupt Status Register, UARTMIS&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">uartmis</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt Clear Register, UARTICR\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uarticr](uarticr) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt Clear Register, UARTICR
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [uarticr](uarticr) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">UARTICR</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_UARTICR</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -461,7 +601,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Writable</span> <span class="kw">for</span> <span class="ident">UARTICR</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt Clear Register, UARTICR&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">uarticr</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;DMA Control Register, UARTDMACR\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartdmacr](uartdmacr) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;DMA Control Register, UARTDMACR
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [uartdmacr](uartdmacr) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">UARTDMACR</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_UARTDMACR</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -472,7 +616,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Writable</span> <span class="kw">for</span> <span class="ident">UARTDMACR</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;DMA Control Register, UARTDMACR&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">uartdmacr</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;UARTPeriphID0 Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartperiphid0](uartperiphid0) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;UARTPeriphID0 Register
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [uartperiphid0](uartperiphid0) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">UARTPERIPHID0</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_UARTPERIPHID0</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -481,7 +629,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Readable</span> <span class="kw">for</span> <span class="ident">UARTPERIPHID0</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;UARTPeriphID0 Register&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">uartperiphid0</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;UARTPeriphID1 Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartperiphid1](uartperiphid1) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;UARTPeriphID1 Register
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [uartperiphid1](uartperiphid1) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">UARTPERIPHID1</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_UARTPERIPHID1</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -490,7 +642,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Readable</span> <span class="kw">for</span> <span class="ident">UARTPERIPHID1</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;UARTPeriphID1 Register&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">uartperiphid1</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;UARTPeriphID2 Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartperiphid2](uartperiphid2) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;UARTPeriphID2 Register
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [uartperiphid2](uartperiphid2) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">UARTPERIPHID2</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_UARTPERIPHID2</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -499,7 +655,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Readable</span> <span class="kw">for</span> <span class="ident">UARTPERIPHID2</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;UARTPeriphID2 Register&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">uartperiphid2</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;UARTPeriphID3 Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartperiphid3](uartperiphid3) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;UARTPeriphID3 Register
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [uartperiphid3](uartperiphid3) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">UARTPERIPHID3</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_UARTPERIPHID3</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -508,7 +668,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Readable</span> <span class="kw">for</span> <span class="ident">UARTPERIPHID3</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;UARTPeriphID3 Register&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">uartperiphid3</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;UARTPCellID0 Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartpcellid0](uartpcellid0) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;UARTPCellID0 Register
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [uartpcellid0](uartpcellid0) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">UARTPCELLID0</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_UARTPCELLID0</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -517,7 +681,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Readable</span> <span class="kw">for</span> <span class="ident">UARTPCELLID0</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;UARTPCellID0 Register&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">uartpcellid0</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;UARTPCellID1 Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartpcellid1](uartpcellid1) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;UARTPCellID1 Register
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [uartpcellid1](uartpcellid1) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">UARTPCELLID1</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_UARTPCELLID1</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -526,7 +694,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Readable</span> <span class="kw">for</span> <span class="ident">UARTPCELLID1</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;UARTPCellID1 Register&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">uartpcellid1</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;UARTPCellID2 Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartpcellid2](uartpcellid2) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;UARTPCellID2 Register
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [uartpcellid2](uartpcellid2) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">UARTPCELLID2</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_UARTPCELLID2</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -535,7 +707,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Readable</span> <span class="kw">for</span> <span class="ident">UARTPCELLID2</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;UARTPCellID2 Register&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">uartpcellid2</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;UARTPCellID3 Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartpcellid3](uartpcellid3) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;UARTPCellID3 Register
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [uartpcellid3](uartpcellid3) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">UARTPCELLID3</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_UARTPCELLID3</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>

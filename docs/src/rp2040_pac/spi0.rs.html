@@ -218,6 +218,78 @@
 <span id="215">215</span>
 <span id="216">216</span>
 <span id="217">217</span>
+<span id="218">218</span>
+<span id="219">219</span>
+<span id="220">220</span>
+<span id="221">221</span>
+<span id="222">222</span>
+<span id="223">223</span>
+<span id="224">224</span>
+<span id="225">225</span>
+<span id="226">226</span>
+<span id="227">227</span>
+<span id="228">228</span>
+<span id="229">229</span>
+<span id="230">230</span>
+<span id="231">231</span>
+<span id="232">232</span>
+<span id="233">233</span>
+<span id="234">234</span>
+<span id="235">235</span>
+<span id="236">236</span>
+<span id="237">237</span>
+<span id="238">238</span>
+<span id="239">239</span>
+<span id="240">240</span>
+<span id="241">241</span>
+<span id="242">242</span>
+<span id="243">243</span>
+<span id="244">244</span>
+<span id="245">245</span>
+<span id="246">246</span>
+<span id="247">247</span>
+<span id="248">248</span>
+<span id="249">249</span>
+<span id="250">250</span>
+<span id="251">251</span>
+<span id="252">252</span>
+<span id="253">253</span>
+<span id="254">254</span>
+<span id="255">255</span>
+<span id="256">256</span>
+<span id="257">257</span>
+<span id="258">258</span>
+<span id="259">259</span>
+<span id="260">260</span>
+<span id="261">261</span>
+<span id="262">262</span>
+<span id="263">263</span>
+<span id="264">264</span>
+<span id="265">265</span>
+<span id="266">266</span>
+<span id="267">267</span>
+<span id="268">268</span>
+<span id="269">269</span>
+<span id="270">270</span>
+<span id="271">271</span>
+<span id="272">272</span>
+<span id="273">273</span>
+<span id="274">274</span>
+<span id="275">275</span>
+<span id="276">276</span>
+<span id="277">277</span>
+<span id="278">278</span>
+<span id="279">279</span>
+<span id="280">280</span>
+<span id="281">281</span>
+<span id="282">282</span>
+<span id="283">283</span>
+<span id="284">284</span>
+<span id="285">285</span>
+<span id="286">286</span>
+<span id="287">287</span>
+<span id="288">288</span>
+<span id="289">289</span>
 </pre><div class="example-wrap"><pre class="rust ">
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">r&quot;Register block&quot;</span>]</span>
 <span class="attribute">#[<span class="ident">repr</span>(<span class="ident">C</span>)]</span>
@@ -260,7 +332,11 @@
     <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;0xffc - PrimeCell identification registers, SSPPCellID0-3 on page 3-16&quot;</span>]</span>
     <span class="kw">pub</span> <span class="ident">ssppcellid3</span>: <span class="ident">SSPPCELLID3</span>,
 }
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Control register 0, SSPCR0 on page 3-4\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sspcr0](sspcr0) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Control register 0, SSPCR0 on page 3-4
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [sspcr0](sspcr0) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">SSPCR0</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_SSPCR0</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -271,7 +347,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Writable</span> <span class="kw">for</span> <span class="ident">SSPCR0</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Control register 0, SSPCR0 on page 3-4&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">sspcr0</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Control register 1, SSPCR1 on page 3-5\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sspcr1](sspcr1) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Control register 1, SSPCR1 on page 3-5
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [sspcr1](sspcr1) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">SSPCR1</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_SSPCR1</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -282,7 +362,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Writable</span> <span class="kw">for</span> <span class="ident">SSPCR1</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Control register 1, SSPCR1 on page 3-5&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">sspcr1</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Data register, SSPDR on page 3-6\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sspdr](sspdr) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Data register, SSPDR on page 3-6
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [sspdr](sspdr) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">SSPDR</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_SSPDR</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -293,7 +377,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Writable</span> <span class="kw">for</span> <span class="ident">SSPDR</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Data register, SSPDR on page 3-6&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">sspdr</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Status register, SSPSR on page 3-7\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sspsr](sspsr) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Status register, SSPSR on page 3-7
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [sspsr](sspsr) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">SSPSR</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_SSPSR</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -302,7 +390,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Readable</span> <span class="kw">for</span> <span class="ident">SSPSR</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Status register, SSPSR on page 3-7&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">sspsr</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Clock prescale register, SSPCPSR on page 3-8\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sspcpsr](sspcpsr) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Clock prescale register, SSPCPSR on page 3-8
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [sspcpsr](sspcpsr) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">SSPCPSR</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_SSPCPSR</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -313,7 +405,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Writable</span> <span class="kw">for</span> <span class="ident">SSPCPSR</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Clock prescale register, SSPCPSR on page 3-8&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">sspcpsr</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt mask set or clear register, SSPIMSC on page 3-9\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sspimsc](sspimsc) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt mask set or clear register, SSPIMSC on page 3-9
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [sspimsc](sspimsc) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">SSPIMSC</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_SSPIMSC</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -324,7 +420,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Writable</span> <span class="kw">for</span> <span class="ident">SSPIMSC</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt mask set or clear register, SSPIMSC on page 3-9&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">sspimsc</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Raw interrupt status register, SSPRIS on page 3-10\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sspris](sspris) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Raw interrupt status register, SSPRIS on page 3-10
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [sspris](sspris) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">SSPRIS</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_SSPRIS</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -333,7 +433,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Readable</span> <span class="kw">for</span> <span class="ident">SSPRIS</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Raw interrupt status register, SSPRIS on page 3-10&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">sspris</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Masked interrupt status register, SSPMIS on page 3-11\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sspmis](sspmis) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Masked interrupt status register, SSPMIS on page 3-11
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [sspmis](sspmis) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">SSPMIS</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_SSPMIS</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -342,7 +446,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Readable</span> <span class="kw">for</span> <span class="ident">SSPMIS</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Masked interrupt status register, SSPMIS on page 3-11&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">sspmis</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt clear register, SSPICR on page 3-11\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sspicr](sspicr) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt clear register, SSPICR on page 3-11
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [sspicr](sspicr) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">SSPICR</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_SSPICR</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -353,7 +461,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Writable</span> <span class="kw">for</span> <span class="ident">SSPICR</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt clear register, SSPICR on page 3-11&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">sspicr</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;DMA control register, SSPDMACR on page 3-12\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sspdmacr](sspdmacr) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;DMA control register, SSPDMACR on page 3-12
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [sspdmacr](sspdmacr) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">SSPDMACR</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_SSPDMACR</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -364,7 +476,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Writable</span> <span class="kw">for</span> <span class="ident">SSPDMACR</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;DMA control register, SSPDMACR on page 3-12&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">sspdmacr</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Peripheral identification registers, SSPPeriphID0-3 on page 3-13\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sspperiphid0](sspperiphid0) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Peripheral identification registers, SSPPeriphID0-3 on page 3-13
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [sspperiphid0](sspperiphid0) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">SSPPERIPHID0</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_SSPPERIPHID0</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -373,7 +489,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Readable</span> <span class="kw">for</span> <span class="ident">SSPPERIPHID0</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Peripheral identification registers, SSPPeriphID0-3 on page 3-13&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">sspperiphid0</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Peripheral identification registers, SSPPeriphID0-3 on page 3-13\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sspperiphid1](sspperiphid1) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Peripheral identification registers, SSPPeriphID0-3 on page 3-13
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [sspperiphid1](sspperiphid1) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">SSPPERIPHID1</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_SSPPERIPHID1</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -382,7 +502,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Readable</span> <span class="kw">for</span> <span class="ident">SSPPERIPHID1</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Peripheral identification registers, SSPPeriphID0-3 on page 3-13&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">sspperiphid1</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Peripheral identification registers, SSPPeriphID0-3 on page 3-13\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sspperiphid2](sspperiphid2) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Peripheral identification registers, SSPPeriphID0-3 on page 3-13
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [sspperiphid2](sspperiphid2) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">SSPPERIPHID2</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_SSPPERIPHID2</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -391,7 +515,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Readable</span> <span class="kw">for</span> <span class="ident">SSPPERIPHID2</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Peripheral identification registers, SSPPeriphID0-3 on page 3-13&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">sspperiphid2</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Peripheral identification registers, SSPPeriphID0-3 on page 3-13\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sspperiphid3](sspperiphid3) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Peripheral identification registers, SSPPeriphID0-3 on page 3-13
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [sspperiphid3](sspperiphid3) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">SSPPERIPHID3</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_SSPPERIPHID3</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -400,7 +528,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Readable</span> <span class="kw">for</span> <span class="ident">SSPPERIPHID3</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Peripheral identification registers, SSPPeriphID0-3 on page 3-13&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">sspperiphid3</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;PrimeCell identification registers, SSPPCellID0-3 on page 3-16\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ssppcellid0](ssppcellid0) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;PrimeCell identification registers, SSPPCellID0-3 on page 3-16
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [ssppcellid0](ssppcellid0) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">SSPPCELLID0</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_SSPPCELLID0</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -409,7 +541,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Readable</span> <span class="kw">for</span> <span class="ident">SSPPCELLID0</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;PrimeCell identification registers, SSPPCellID0-3 on page 3-16&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">ssppcellid0</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;PrimeCell identification registers, SSPPCellID0-3 on page 3-16\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ssppcellid1](ssppcellid1) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;PrimeCell identification registers, SSPPCellID0-3 on page 3-16
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [ssppcellid1](ssppcellid1) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">SSPPCELLID1</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_SSPPCELLID1</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -418,7 +554,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Readable</span> <span class="kw">for</span> <span class="ident">SSPPCELLID1</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;PrimeCell identification registers, SSPPCellID0-3 on page 3-16&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">ssppcellid1</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;PrimeCell identification registers, SSPPCellID0-3 on page 3-16\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ssppcellid2](ssppcellid2) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;PrimeCell identification registers, SSPPCellID0-3 on page 3-16
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [ssppcellid2](ssppcellid2) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">SSPPCELLID2</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_SSPPCELLID2</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -427,7 +567,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Readable</span> <span class="kw">for</span> <span class="ident">SSPPCELLID2</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;PrimeCell identification registers, SSPPCellID0-3 on page 3-16&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">ssppcellid2</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;PrimeCell identification registers, SSPPCellID0-3 on page 3-16\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ssppcellid3](ssppcellid3) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;PrimeCell identification registers, SSPPCellID0-3 on page 3-16
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [ssppcellid3](ssppcellid3) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">SSPPCELLID3</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_SSPPCELLID3</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>

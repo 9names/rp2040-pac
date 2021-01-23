@@ -42,6 +42,18 @@
 <span id="39">39</span>
 <span id="40">40</span>
 <span id="41">41</span>
+<span id="42">42</span>
+<span id="43">43</span>
+<span id="44">44</span>
+<span id="45">45</span>
+<span id="46">46</span>
+<span id="47">47</span>
+<span id="48">48</span>
+<span id="49">49</span>
+<span id="50">50</span>
+<span id="51">51</span>
+<span id="52">52</span>
+<span id="53">53</span>
 </pre><div class="example-wrap"><pre class="rust ">
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">r&quot;Register block&quot;</span>]</span>
 <span class="attribute">#[<span class="ident">repr</span>(<span class="ident">C</span>)]</span>
@@ -53,7 +65,11 @@
     <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;0x08 - Reset done. If a bit is set then a reset done signal has been returned by the peripheral. This indicates that the peripheral&#39;s registers are ready to be accessed.&quot;</span>]</span>
     <span class="kw">pub</span> <span class="ident">reset_done</span>: <span class="ident">RESET_DONE</span>,
 }
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Reset control. If a bit is set it means the peripheral is in reset. 0 means the peripheral&#39;s reset is deasserted.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [reset](reset) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Reset control. If a bit is set it means the peripheral is in reset. 0 means the peripheral&#39;s reset is deasserted.
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [reset](reset) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">RESET</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_RESET</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -64,7 +80,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Writable</span> <span class="kw">for</span> <span class="ident">RESET</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Reset control. If a bit is set it means the peripheral is in reset. 0 means the peripheral&#39;s reset is deasserted.&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">reset</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Watchdog select. If a bit is set then the watchdog will reset this peripheral when the watchdog fires.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [wdsel](wdsel) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Watchdog select. If a bit is set then the watchdog will reset this peripheral when the watchdog fires.
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [wdsel](wdsel) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">WDSEL</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_WDSEL</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -75,7 +95,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Writable</span> <span class="kw">for</span> <span class="ident">WDSEL</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Watchdog select. If a bit is set then the watchdog will reset this peripheral when the watchdog fires.&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">wdsel</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Reset done. If a bit is set then a reset done signal has been returned by the peripheral. This indicates that the peripheral&#39;s registers are ready to be accessed.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [reset_done](reset_done) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Reset done. If a bit is set then a reset done signal has been returned by the peripheral. This indicates that the peripheral&#39;s registers are ready to be accessed.
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [reset_done](reset_done) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">RESET_DONE</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_RESET_DONE</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>

@@ -41,6 +41,20 @@
 <span id="38">38</span>
 <span id="39">39</span>
 <span id="40">40</span>
+<span id="41">41</span>
+<span id="42">42</span>
+<span id="43">43</span>
+<span id="44">44</span>
+<span id="45">45</span>
+<span id="46">46</span>
+<span id="47">47</span>
+<span id="48">48</span>
+<span id="49">49</span>
+<span id="50">50</span>
+<span id="51">51</span>
+<span id="52">52</span>
+<span id="53">53</span>
+<span id="54">54</span>
 </pre><div class="example-wrap"><pre class="rust ">
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Reader of register STREAM_CTR&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">R</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">R</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="kw">super</span>::<span class="ident">STREAM_CTR</span><span class="op">&gt;</span>;
@@ -69,14 +83,28 @@
     }
 }
 <span class="kw">impl</span> <span class="ident">R</span> {
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 0:21 - Write a nonzero value to start a streaming read. This will then\\n progress in the background, using flash idle cycles to transfer\\n a linear data block from flash to the streaming FIFO.\\n Decrements automatically (1 at a time) as the stream\\n progresses, and halts on reaching 0.\\n Write 0 to halt an in-progress stream, and discard any in-flight\\n read, so that a new stream can immediately be started (after\\n draining the FIFO and reinitialising STREAM_ADDR)&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 0:21 - Write a nonzero value to start a streaming read. This will then  
+ progress in the background, using flash idle cycles to transfer  
+ a linear data block from flash to the streaming FIFO.  
+ Decrements automatically (1 at a time) as the stream  
+ progresses, and halts on reaching 0.  
+ Write 0 to halt an in-progress stream, and discard any in-flight  
+ read, so that a new stream can immediately be started (after  
+ draining the FIFO and reinitialising STREAM_ADDR)&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">stream_ctr</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">STREAM_CTR_R</span> {
         <span class="ident">STREAM_CTR_R</span>::<span class="ident">new</span>((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&amp;</span> <span class="number">0x003f_ffff</span>) <span class="kw">as</span> <span class="ident">u32</span>)
     }
 }
 <span class="kw">impl</span> <span class="ident">W</span> {
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 0:21 - Write a nonzero value to start a streaming read. This will then\\n progress in the background, using flash idle cycles to transfer\\n a linear data block from flash to the streaming FIFO.\\n Decrements automatically (1 at a time) as the stream\\n progresses, and halts on reaching 0.\\n Write 0 to halt an in-progress stream, and discard any in-flight\\n read, so that a new stream can immediately be started (after\\n draining the FIFO and reinitialising STREAM_ADDR)&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 0:21 - Write a nonzero value to start a streaming read. This will then  
+ progress in the background, using flash idle cycles to transfer  
+ a linear data block from flash to the streaming FIFO.  
+ Decrements automatically (1 at a time) as the stream  
+ progresses, and halts on reaching 0.  
+ Write 0 to halt an in-progress stream, and discard any in-flight  
+ read, so that a new stream can immediately be started (after  
+ draining the FIFO and reinitialising STREAM_ADDR)&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">stream_ctr</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">STREAM_CTR_W</span> {
         <span class="ident">STREAM_CTR_W</span> { <span class="ident">w</span>: <span class="self">self</span> }

@@ -365,6 +365,21 @@
 <span id="362">362</span>
 <span id="363">363</span>
 <span id="364">364</span>
+<span id="365">365</span>
+<span id="366">366</span>
+<span id="367">367</span>
+<span id="368">368</span>
+<span id="369">369</span>
+<span id="370">370</span>
+<span id="371">371</span>
+<span id="372">372</span>
+<span id="373">373</span>
+<span id="374">374</span>
+<span id="375">375</span>
+<span id="376">376</span>
+<span id="377">377</span>
+<span id="378">378</span>
+<span id="379">379</span>
 </pre><div class="example-wrap"><pre class="rust ">
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Reader of register SM2_EXECCTRL&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">R</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">R</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="kw">super</span>::<span class="ident">SM2_EXECCTRL</span><span class="op">&gt;</span>;
@@ -532,7 +547,9 @@
         <span class="self">self</span>.<span class="ident">w</span>
     }
 }
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Comparison used for the MOV x, STATUS instruction.\n\nValue on reset: 0&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Comparison used for the MOV x, STATUS instruction.
+
+Value on reset: 0&quot;</span>]</span>
 <span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Clone</span>, <span class="ident">Copy</span>, <span class="ident">Debug</span>, <span class="ident">PartialEq</span>)]</span>
 <span class="kw">pub</span> <span class="kw">enum</span> <span class="ident">STATUS_SEL_A</span> {
     <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;0: All-ones if TX FIFO level &lt; N, otherwise all-zeroes&quot;</span>]</span>
@@ -622,12 +639,15 @@
     }
 }
 <span class="kw">impl</span> <span class="ident">R</span> {
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 31 - An instruction written to SMx_INSTR is stalled, and latched by the\\n state machine. Will clear once the instruction completes.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 31 - An instruction written to SMx_INSTR is stalled, and latched by the  
+ state machine. Will clear once the instruction completes.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">exec_stalled</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">EXEC_STALLED_R</span> {
         <span class="ident">EXEC_STALLED_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">31</span>) <span class="op">&amp;</span> <span class="number">0x01</span>) <span class="op">!</span><span class="op">=</span> <span class="number">0</span>)
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 30 - If 1, the delay MSB is used as side-set enable, rather than a\\n side-set data bit. This allows instructions to perform side-set optionally,\\n rather than on every instruction.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 30 - If 1, the delay MSB is used as side-set enable, rather than a  
+ side-set data bit. This allows instructions to perform side-set optionally,  
+ rather than on every instruction.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">side_en</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">SIDE_EN_R</span> {
         <span class="ident">SIDE_EN_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">30</span>) <span class="op">&amp;</span> <span class="number">0x01</span>) <span class="op">!</span><span class="op">=</span> <span class="number">0</span>)
@@ -647,7 +667,10 @@
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">out_en_sel</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">OUT_EN_SEL_R</span> {
         <span class="ident">OUT_EN_SEL_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">19</span>) <span class="op">&amp;</span> <span class="number">0x1f</span>) <span class="kw">as</span> <span class="ident">u8</span>)
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 18 - If 1, use a bit of OUT data as an auxiliary write enable\\n When used in conjunction with OUT_STICKY, writes with an enable of 0 will\\n deassert the latest pin write. This can create useful masking/override behaviour\\n due to the priority ordering of state machine pin writes (SM0 &lt; SM1 &lt; ...)&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 18 - If 1, use a bit of OUT data as an auxiliary write enable  
+ When used in conjunction with OUT_STICKY, writes with an enable of 0 will  
+ deassert the latest pin write. This can create useful masking/override behaviour  
+ due to the priority ordering of state machine pin writes (SM0 &lt; SM1 &lt; ...)&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">inline_out_en</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">INLINE_OUT_EN_R</span> {
         <span class="ident">INLINE_OUT_EN_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">18</span>) <span class="op">&amp;</span> <span class="number">0x01</span>) <span class="op">!</span><span class="op">=</span> <span class="number">0</span>)
@@ -657,7 +680,8 @@
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">out_sticky</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">OUT_STICKY_R</span> {
         <span class="ident">OUT_STICKY_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">17</span>) <span class="op">&amp;</span> <span class="number">0x01</span>) <span class="op">!</span><span class="op">=</span> <span class="number">0</span>)
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 12:16 - After reaching this address, execution is wrapped to wrap_bottom.\\n If the instruction is a jump, and the jump condition is true, the jump takes priority.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 12:16 - After reaching this address, execution is wrapped to wrap_bottom.  
+ If the instruction is a jump, and the jump condition is true, the jump takes priority.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">wrap_top</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">WRAP_TOP_R</span> {
         <span class="ident">WRAP_TOP_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">12</span>) <span class="op">&amp;</span> <span class="number">0x1f</span>) <span class="kw">as</span> <span class="ident">u8</span>)
@@ -679,7 +703,9 @@
     }
 }
 <span class="kw">impl</span> <span class="ident">W</span> {
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 30 - If 1, the delay MSB is used as side-set enable, rather than a\\n side-set data bit. This allows instructions to perform side-set optionally,\\n rather than on every instruction.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 30 - If 1, the delay MSB is used as side-set enable, rather than a  
+ side-set data bit. This allows instructions to perform side-set optionally,  
+ rather than on every instruction.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">side_en</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">SIDE_EN_W</span> {
         <span class="ident">SIDE_EN_W</span> { <span class="ident">w</span>: <span class="self">self</span> }
@@ -699,7 +725,10 @@
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">out_en_sel</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">OUT_EN_SEL_W</span> {
         <span class="ident">OUT_EN_SEL_W</span> { <span class="ident">w</span>: <span class="self">self</span> }
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 18 - If 1, use a bit of OUT data as an auxiliary write enable\\n When used in conjunction with OUT_STICKY, writes with an enable of 0 will\\n deassert the latest pin write. This can create useful masking/override behaviour\\n due to the priority ordering of state machine pin writes (SM0 &lt; SM1 &lt; ...)&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 18 - If 1, use a bit of OUT data as an auxiliary write enable  
+ When used in conjunction with OUT_STICKY, writes with an enable of 0 will  
+ deassert the latest pin write. This can create useful masking/override behaviour  
+ due to the priority ordering of state machine pin writes (SM0 &lt; SM1 &lt; ...)&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">inline_out_en</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">INLINE_OUT_EN_W</span> {
         <span class="ident">INLINE_OUT_EN_W</span> { <span class="ident">w</span>: <span class="self">self</span> }
@@ -709,7 +738,8 @@
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">out_sticky</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">OUT_STICKY_W</span> {
         <span class="ident">OUT_STICKY_W</span> { <span class="ident">w</span>: <span class="self">self</span> }
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 12:16 - After reaching this address, execution is wrapped to wrap_bottom.\\n If the instruction is a jump, and the jump condition is true, the jump takes priority.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 12:16 - After reaching this address, execution is wrapped to wrap_bottom.  
+ If the instruction is a jump, and the jump condition is true, the jump takes priority.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">wrap_top</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">WRAP_TOP_W</span> {
         <span class="ident">WRAP_TOP_W</span> { <span class="ident">w</span>: <span class="self">self</span> }

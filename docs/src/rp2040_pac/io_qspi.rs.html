@@ -273,6 +273,94 @@
 <span id="270">270</span>
 <span id="271">271</span>
 <span id="272">272</span>
+<span id="273">273</span>
+<span id="274">274</span>
+<span id="275">275</span>
+<span id="276">276</span>
+<span id="277">277</span>
+<span id="278">278</span>
+<span id="279">279</span>
+<span id="280">280</span>
+<span id="281">281</span>
+<span id="282">282</span>
+<span id="283">283</span>
+<span id="284">284</span>
+<span id="285">285</span>
+<span id="286">286</span>
+<span id="287">287</span>
+<span id="288">288</span>
+<span id="289">289</span>
+<span id="290">290</span>
+<span id="291">291</span>
+<span id="292">292</span>
+<span id="293">293</span>
+<span id="294">294</span>
+<span id="295">295</span>
+<span id="296">296</span>
+<span id="297">297</span>
+<span id="298">298</span>
+<span id="299">299</span>
+<span id="300">300</span>
+<span id="301">301</span>
+<span id="302">302</span>
+<span id="303">303</span>
+<span id="304">304</span>
+<span id="305">305</span>
+<span id="306">306</span>
+<span id="307">307</span>
+<span id="308">308</span>
+<span id="309">309</span>
+<span id="310">310</span>
+<span id="311">311</span>
+<span id="312">312</span>
+<span id="313">313</span>
+<span id="314">314</span>
+<span id="315">315</span>
+<span id="316">316</span>
+<span id="317">317</span>
+<span id="318">318</span>
+<span id="319">319</span>
+<span id="320">320</span>
+<span id="321">321</span>
+<span id="322">322</span>
+<span id="323">323</span>
+<span id="324">324</span>
+<span id="325">325</span>
+<span id="326">326</span>
+<span id="327">327</span>
+<span id="328">328</span>
+<span id="329">329</span>
+<span id="330">330</span>
+<span id="331">331</span>
+<span id="332">332</span>
+<span id="333">333</span>
+<span id="334">334</span>
+<span id="335">335</span>
+<span id="336">336</span>
+<span id="337">337</span>
+<span id="338">338</span>
+<span id="339">339</span>
+<span id="340">340</span>
+<span id="341">341</span>
+<span id="342">342</span>
+<span id="343">343</span>
+<span id="344">344</span>
+<span id="345">345</span>
+<span id="346">346</span>
+<span id="347">347</span>
+<span id="348">348</span>
+<span id="349">349</span>
+<span id="350">350</span>
+<span id="351">351</span>
+<span id="352">352</span>
+<span id="353">353</span>
+<span id="354">354</span>
+<span id="355">355</span>
+<span id="356">356</span>
+<span id="357">357</span>
+<span id="358">358</span>
+<span id="359">359</span>
+<span id="360">360</span>
 </pre><div class="example-wrap"><pre class="rust ">
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">r&quot;Register block&quot;</span>]</span>
 <span class="attribute">#[<span class="ident">repr</span>(<span class="ident">C</span>)]</span>
@@ -322,7 +410,11 @@
     <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;0x54 - Interrupt status after masking &amp; forcing for dormant_wake&quot;</span>]</span>
     <span class="kw">pub</span> <span class="ident">dormant_wake_ints</span>: <span class="ident">DORMANT_WAKE_INTS</span>,
 }
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpio_qspi_sclk_status](gpio_qspi_sclk_status) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO status
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [gpio_qspi_sclk_status](gpio_qspi_sclk_status) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">GPIO_QSPI_SCLK_STATUS</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_GPIO_QSPI_SCLK_STATUS</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -331,7 +423,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Readable</span> <span class="kw">for</span> <span class="ident">GPIO_QSPI_SCLK_STATUS</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO status&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">gpio_qspi_sclk_status</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO control including function select and overrides.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpio_qspi_sclk_ctrl](gpio_qspi_sclk_ctrl) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO control including function select and overrides.
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [gpio_qspi_sclk_ctrl](gpio_qspi_sclk_ctrl) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">GPIO_QSPI_SCLK_CTRL</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_GPIO_QSPI_SCLK_CTRL</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -342,7 +438,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Writable</span> <span class="kw">for</span> <span class="ident">GPIO_QSPI_SCLK_CTRL</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO control including function select and overrides.&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">gpio_qspi_sclk_ctrl</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpio_qspi_ss_status](gpio_qspi_ss_status) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO status
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [gpio_qspi_ss_status](gpio_qspi_ss_status) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">GPIO_QSPI_SS_STATUS</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_GPIO_QSPI_SS_STATUS</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -351,7 +451,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Readable</span> <span class="kw">for</span> <span class="ident">GPIO_QSPI_SS_STATUS</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO status&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">gpio_qspi_ss_status</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO control including function select and overrides.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpio_qspi_ss_ctrl](gpio_qspi_ss_ctrl) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO control including function select and overrides.
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [gpio_qspi_ss_ctrl](gpio_qspi_ss_ctrl) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">GPIO_QSPI_SS_CTRL</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_GPIO_QSPI_SS_CTRL</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -362,7 +466,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Writable</span> <span class="kw">for</span> <span class="ident">GPIO_QSPI_SS_CTRL</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO control including function select and overrides.&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">gpio_qspi_ss_ctrl</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpio_qspi_sd0_status](gpio_qspi_sd0_status) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO status
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [gpio_qspi_sd0_status](gpio_qspi_sd0_status) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">GPIO_QSPI_SD0_STATUS</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_GPIO_QSPI_SD0_STATUS</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -371,7 +479,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Readable</span> <span class="kw">for</span> <span class="ident">GPIO_QSPI_SD0_STATUS</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO status&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">gpio_qspi_sd0_status</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO control including function select and overrides.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpio_qspi_sd0_ctrl](gpio_qspi_sd0_ctrl) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO control including function select and overrides.
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [gpio_qspi_sd0_ctrl](gpio_qspi_sd0_ctrl) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">GPIO_QSPI_SD0_CTRL</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_GPIO_QSPI_SD0_CTRL</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -382,7 +494,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Writable</span> <span class="kw">for</span> <span class="ident">GPIO_QSPI_SD0_CTRL</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO control including function select and overrides.&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">gpio_qspi_sd0_ctrl</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpio_qspi_sd1_status](gpio_qspi_sd1_status) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO status
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [gpio_qspi_sd1_status](gpio_qspi_sd1_status) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">GPIO_QSPI_SD1_STATUS</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_GPIO_QSPI_SD1_STATUS</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -391,7 +507,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Readable</span> <span class="kw">for</span> <span class="ident">GPIO_QSPI_SD1_STATUS</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO status&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">gpio_qspi_sd1_status</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO control including function select and overrides.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpio_qspi_sd1_ctrl](gpio_qspi_sd1_ctrl) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO control including function select and overrides.
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [gpio_qspi_sd1_ctrl](gpio_qspi_sd1_ctrl) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">GPIO_QSPI_SD1_CTRL</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_GPIO_QSPI_SD1_CTRL</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -402,7 +522,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Writable</span> <span class="kw">for</span> <span class="ident">GPIO_QSPI_SD1_CTRL</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO control including function select and overrides.&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">gpio_qspi_sd1_ctrl</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpio_qspi_sd2_status](gpio_qspi_sd2_status) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO status
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [gpio_qspi_sd2_status](gpio_qspi_sd2_status) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">GPIO_QSPI_SD2_STATUS</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_GPIO_QSPI_SD2_STATUS</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -411,7 +535,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Readable</span> <span class="kw">for</span> <span class="ident">GPIO_QSPI_SD2_STATUS</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO status&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">gpio_qspi_sd2_status</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO control including function select and overrides.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpio_qspi_sd2_ctrl](gpio_qspi_sd2_ctrl) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO control including function select and overrides.
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [gpio_qspi_sd2_ctrl](gpio_qspi_sd2_ctrl) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">GPIO_QSPI_SD2_CTRL</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_GPIO_QSPI_SD2_CTRL</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -422,7 +550,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Writable</span> <span class="kw">for</span> <span class="ident">GPIO_QSPI_SD2_CTRL</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO control including function select and overrides.&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">gpio_qspi_sd2_ctrl</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpio_qspi_sd3_status](gpio_qspi_sd3_status) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO status
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [gpio_qspi_sd3_status](gpio_qspi_sd3_status) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">GPIO_QSPI_SD3_STATUS</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_GPIO_QSPI_SD3_STATUS</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -431,7 +563,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Readable</span> <span class="kw">for</span> <span class="ident">GPIO_QSPI_SD3_STATUS</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO status&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">gpio_qspi_sd3_status</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO control including function select and overrides.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpio_qspi_sd3_ctrl](gpio_qspi_sd3_ctrl) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO control including function select and overrides.
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [gpio_qspi_sd3_ctrl](gpio_qspi_sd3_ctrl) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">GPIO_QSPI_SD3_CTRL</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_GPIO_QSPI_SD3_CTRL</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -442,7 +578,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Writable</span> <span class="kw">for</span> <span class="ident">GPIO_QSPI_SD3_CTRL</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;GPIO control including function select and overrides.&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">gpio_qspi_sd3_ctrl</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Raw Interrupts\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [intr](intr) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Raw Interrupts
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [intr](intr) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">INTR</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_INTR</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -453,7 +593,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Writable</span> <span class="kw">for</span> <span class="ident">INTR</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Raw Interrupts&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">intr</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt Enable for proc0\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [proc0_inte](proc0_inte) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt Enable for proc0
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [proc0_inte](proc0_inte) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">PROC0_INTE</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_PROC0_INTE</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -464,7 +608,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Writable</span> <span class="kw">for</span> <span class="ident">PROC0_INTE</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt Enable for proc0&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">proc0_inte</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt Force for proc0\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [proc0_intf](proc0_intf) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt Force for proc0
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [proc0_intf](proc0_intf) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">PROC0_INTF</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_PROC0_INTF</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -475,7 +623,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Writable</span> <span class="kw">for</span> <span class="ident">PROC0_INTF</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt Force for proc0&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">proc0_intf</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt status after masking &amp; forcing for proc0\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [proc0_ints](proc0_ints) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt status after masking &amp; forcing for proc0
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [proc0_ints](proc0_ints) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">PROC0_INTS</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_PROC0_INTS</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -484,7 +636,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Readable</span> <span class="kw">for</span> <span class="ident">PROC0_INTS</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt status after masking &amp; forcing for proc0&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">proc0_ints</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt Enable for proc1\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [proc1_inte](proc1_inte) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt Enable for proc1
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [proc1_inte](proc1_inte) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">PROC1_INTE</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_PROC1_INTE</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -495,7 +651,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Writable</span> <span class="kw">for</span> <span class="ident">PROC1_INTE</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt Enable for proc1&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">proc1_inte</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt Force for proc1\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [proc1_intf](proc1_intf) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt Force for proc1
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [proc1_intf](proc1_intf) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">PROC1_INTF</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_PROC1_INTF</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -506,7 +666,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Writable</span> <span class="kw">for</span> <span class="ident">PROC1_INTF</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt Force for proc1&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">proc1_intf</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt status after masking &amp; forcing for proc1\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [proc1_ints](proc1_ints) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt status after masking &amp; forcing for proc1
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [proc1_ints](proc1_ints) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">PROC1_INTS</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_PROC1_INTS</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -515,7 +679,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Readable</span> <span class="kw">for</span> <span class="ident">PROC1_INTS</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt status after masking &amp; forcing for proc1&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">proc1_ints</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt Enable for dormant_wake\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dormant_wake_inte](dormant_wake_inte) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt Enable for dormant_wake
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [dormant_wake_inte](dormant_wake_inte) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">DORMANT_WAKE_INTE</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_DORMANT_WAKE_INTE</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -526,7 +694,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Writable</span> <span class="kw">for</span> <span class="ident">DORMANT_WAKE_INTE</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt Enable for dormant_wake&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">dormant_wake_inte</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt Force for dormant_wake\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dormant_wake_intf](dormant_wake_intf) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt Force for dormant_wake
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [dormant_wake_intf](dormant_wake_intf) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">DORMANT_WAKE_INTF</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_DORMANT_WAKE_INTF</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -537,7 +709,11 @@
 <span class="kw">impl</span> <span class="kw">crate</span>::<span class="ident">Writable</span> <span class="kw">for</span> <span class="ident">DORMANT_WAKE_INTF</span> {}
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt Force for dormant_wake&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">dormant_wake_intf</span>;
-<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt status after masking &amp; forcing for dormant_wake\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dormant_wake_ints](dormant_wake_ints) module&quot;</span>]</span>
+<span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Interrupt status after masking &amp; forcing for dormant_wake
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).
+
+For information about available fields see [dormant_wake_ints](dormant_wake_ints) module&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">DORMANT_WAKE_INTS</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">Reg</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="ident">_DORMANT_WAKE_INTS</span><span class="op">&gt;</span>;
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">missing_docs</span>)]</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>

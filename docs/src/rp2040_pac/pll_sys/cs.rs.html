@@ -82,6 +82,10 @@
 <span id="79">79</span>
 <span id="80">80</span>
 <span id="81">81</span>
+<span id="82">82</span>
+<span id="83">83</span>
+<span id="84">84</span>
+<span id="85">85</span>
 </pre><div class="example-wrap"><pre class="rust ">
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Reader of register CS&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">R</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">R</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="kw">super</span>::<span class="ident">CS</span><span class="op">&gt;</span>;
@@ -146,7 +150,9 @@
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">bypass</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">BYPASS_R</span> {
         <span class="ident">BYPASS_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">8</span>) <span class="op">&amp;</span> <span class="number">0x01</span>) <span class="op">!</span><span class="op">=</span> <span class="number">0</span>)
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 0:5 - Divides the PLL input reference clock.\\n Behaviour is undefined for div=0.\\n PLL output will be unpredictable during refdiv changes, wait for lock=1 before using it.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 0:5 - Divides the PLL input reference clock.  
+ Behaviour is undefined for div=0.  
+ PLL output will be unpredictable during refdiv changes, wait for lock=1 before using it.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">refdiv</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">REFDIV_R</span> {
         <span class="ident">REFDIV_R</span>::<span class="ident">new</span>((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&amp;</span> <span class="number">0x3f</span>) <span class="kw">as</span> <span class="ident">u8</span>)
@@ -158,7 +164,9 @@
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">bypass</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">BYPASS_W</span> {
         <span class="ident">BYPASS_W</span> { <span class="ident">w</span>: <span class="self">self</span> }
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 0:5 - Divides the PLL input reference clock.\\n Behaviour is undefined for div=0.\\n PLL output will be unpredictable during refdiv changes, wait for lock=1 before using it.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 0:5 - Divides the PLL input reference clock.  
+ Behaviour is undefined for div=0.  
+ PLL output will be unpredictable during refdiv changes, wait for lock=1 before using it.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">refdiv</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">REFDIV_W</span> {
         <span class="ident">REFDIV_W</span> { <span class="ident">w</span>: <span class="self">self</span> }

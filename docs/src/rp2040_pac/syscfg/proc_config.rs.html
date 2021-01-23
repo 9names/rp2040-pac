@@ -79,6 +79,14 @@
 <span id="76">76</span>
 <span id="77">77</span>
 <span id="78">78</span>
+<span id="79">79</span>
+<span id="80">80</span>
+<span id="81">81</span>
+<span id="82">82</span>
+<span id="83">83</span>
+<span id="84">84</span>
+<span id="85">85</span>
+<span id="86">86</span>
 </pre><div class="example-wrap"><pre class="rust ">
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Reader of register PROC_CONFIG&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">R</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">R</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="kw">super</span>::<span class="ident">PROC_CONFIG</span><span class="op">&gt;</span>;
@@ -125,12 +133,16 @@
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Reader of field `PROC0_HALTED`&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">PROC0_HALTED_R</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">R</span><span class="op">&lt;</span><span class="ident">bool</span>, <span class="ident">bool</span><span class="op">&gt;</span>;
 <span class="kw">impl</span> <span class="ident">R</span> {
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 28:31 - Configure proc1 DAP instance ID.\\n Recommend that this is NOT changed until you require debug access in multi-chip environment\\n WARNING: do not set to 15 as this is reserved for RescueDP&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 28:31 - Configure proc1 DAP instance ID.  
+ Recommend that this is NOT changed until you require debug access in multi-chip environment  
+ WARNING: do not set to 15 as this is reserved for RescueDP&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">proc1_dap_instid</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">PROC1_DAP_INSTID_R</span> {
         <span class="ident">PROC1_DAP_INSTID_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">28</span>) <span class="op">&amp;</span> <span class="number">0x0f</span>) <span class="kw">as</span> <span class="ident">u8</span>)
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 24:27 - Configure proc0 DAP instance ID.\\n Recommend that this is NOT changed until you require debug access in multi-chip environment\\n WARNING: do not set to 15 as this is reserved for RescueDP&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 24:27 - Configure proc0 DAP instance ID.  
+ Recommend that this is NOT changed until you require debug access in multi-chip environment  
+ WARNING: do not set to 15 as this is reserved for RescueDP&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">proc0_dap_instid</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">PROC0_DAP_INSTID_R</span> {
         <span class="ident">PROC0_DAP_INSTID_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">24</span>) <span class="op">&amp;</span> <span class="number">0x0f</span>) <span class="kw">as</span> <span class="ident">u8</span>)
@@ -147,12 +159,16 @@
     }
 }
 <span class="kw">impl</span> <span class="ident">W</span> {
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 28:31 - Configure proc1 DAP instance ID.\\n Recommend that this is NOT changed until you require debug access in multi-chip environment\\n WARNING: do not set to 15 as this is reserved for RescueDP&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 28:31 - Configure proc1 DAP instance ID.  
+ Recommend that this is NOT changed until you require debug access in multi-chip environment  
+ WARNING: do not set to 15 as this is reserved for RescueDP&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">proc1_dap_instid</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">PROC1_DAP_INSTID_W</span> {
         <span class="ident">PROC1_DAP_INSTID_W</span> { <span class="ident">w</span>: <span class="self">self</span> }
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 24:27 - Configure proc0 DAP instance ID.\\n Recommend that this is NOT changed until you require debug access in multi-chip environment\\n WARNING: do not set to 15 as this is reserved for RescueDP&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 24:27 - Configure proc0 DAP instance ID.  
+ Recommend that this is NOT changed until you require debug access in multi-chip environment  
+ WARNING: do not set to 15 as this is reserved for RescueDP&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">proc0_dap_instid</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">PROC0_DAP_INSTID_W</span> {
         <span class="ident">PROC0_DAP_INSTID_W</span> { <span class="ident">w</span>: <span class="self">self</span> }

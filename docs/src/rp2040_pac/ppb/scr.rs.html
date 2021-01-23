@@ -119,6 +119,26 @@
 <span id="116">116</span>
 <span id="117">117</span>
 <span id="118">118</span>
+<span id="119">119</span>
+<span id="120">120</span>
+<span id="121">121</span>
+<span id="122">122</span>
+<span id="123">123</span>
+<span id="124">124</span>
+<span id="125">125</span>
+<span id="126">126</span>
+<span id="127">127</span>
+<span id="128">128</span>
+<span id="129">129</span>
+<span id="130">130</span>
+<span id="131">131</span>
+<span id="132">132</span>
+<span id="133">133</span>
+<span id="134">134</span>
+<span id="135">135</span>
+<span id="136">136</span>
+<span id="137">137</span>
+<span id="138">138</span>
 </pre><div class="example-wrap"><pre class="rust ">
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Reader of register SCR&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">R</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">R</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="kw">super</span>::<span class="ident">SCR</span><span class="op">&gt;</span>;
@@ -205,34 +225,54 @@
     }
 }
 <span class="kw">impl</span> <span class="ident">R</span> {
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 4 - Send Event on Pending bit:\\n 0 = Only enabled interrupts or events can wakeup the processor, disabled interrupts are excluded.\\n 1 = Enabled events and all interrupts, including disabled interrupts, can wakeup the processor.\\n When an event or interrupt becomes pending, the event signal wakes up the processor from WFE. If the\\n processor is not waiting for an event, the event is registered and affects the next WFE.\\n The processor also wakes up on execution of an SEV instruction or an external event.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 4 - Send Event on Pending bit:  
+ 0 = Only enabled interrupts or events can wakeup the processor, disabled interrupts are excluded.  
+ 1 = Enabled events and all interrupts, including disabled interrupts, can wakeup the processor.  
+ When an event or interrupt becomes pending, the event signal wakes up the processor from WFE. If the  
+ processor is not waiting for an event, the event is registered and affects the next WFE.  
+ The processor also wakes up on execution of an SEV instruction or an external event.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">sevonpend</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">SEVONPEND_R</span> {
         <span class="ident">SEVONPEND_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">4</span>) <span class="op">&amp;</span> <span class="number">0x01</span>) <span class="op">!</span><span class="op">=</span> <span class="number">0</span>)
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 2 - Controls whether the processor uses sleep or deep sleep as its low power mode:\\n 0 = Sleep.\\n 1 = Deep sleep.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 2 - Controls whether the processor uses sleep or deep sleep as its low power mode:  
+ 0 = Sleep.  
+ 1 = Deep sleep.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">sleepdeep</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">SLEEPDEEP_R</span> {
         <span class="ident">SLEEPDEEP_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">2</span>) <span class="op">&amp;</span> <span class="number">0x01</span>) <span class="op">!</span><span class="op">=</span> <span class="number">0</span>)
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 1 - Indicates sleep-on-exit when returning from Handler mode to Thread mode:\\n 0 = Do not sleep when returning to Thread mode.\\n 1 = Enter sleep, or deep sleep, on return from an ISR to Thread mode.\\n Setting this bit to 1 enables an interrupt driven application to avoid returning to an empty main application.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 1 - Indicates sleep-on-exit when returning from Handler mode to Thread mode:  
+ 0 = Do not sleep when returning to Thread mode.  
+ 1 = Enter sleep, or deep sleep, on return from an ISR to Thread mode.  
+ Setting this bit to 1 enables an interrupt driven application to avoid returning to an empty main application.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">sleeponexit</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">SLEEPONEXIT_R</span> {
         <span class="ident">SLEEPONEXIT_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">1</span>) <span class="op">&amp;</span> <span class="number">0x01</span>) <span class="op">!</span><span class="op">=</span> <span class="number">0</span>)
     }
 }
 <span class="kw">impl</span> <span class="ident">W</span> {
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 4 - Send Event on Pending bit:\\n 0 = Only enabled interrupts or events can wakeup the processor, disabled interrupts are excluded.\\n 1 = Enabled events and all interrupts, including disabled interrupts, can wakeup the processor.\\n When an event or interrupt becomes pending, the event signal wakes up the processor from WFE. If the\\n processor is not waiting for an event, the event is registered and affects the next WFE.\\n The processor also wakes up on execution of an SEV instruction or an external event.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 4 - Send Event on Pending bit:  
+ 0 = Only enabled interrupts or events can wakeup the processor, disabled interrupts are excluded.  
+ 1 = Enabled events and all interrupts, including disabled interrupts, can wakeup the processor.  
+ When an event or interrupt becomes pending, the event signal wakes up the processor from WFE. If the  
+ processor is not waiting for an event, the event is registered and affects the next WFE.  
+ The processor also wakes up on execution of an SEV instruction or an external event.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">sevonpend</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">SEVONPEND_W</span> {
         <span class="ident">SEVONPEND_W</span> { <span class="ident">w</span>: <span class="self">self</span> }
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 2 - Controls whether the processor uses sleep or deep sleep as its low power mode:\\n 0 = Sleep.\\n 1 = Deep sleep.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 2 - Controls whether the processor uses sleep or deep sleep as its low power mode:  
+ 0 = Sleep.  
+ 1 = Deep sleep.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">sleepdeep</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">SLEEPDEEP_W</span> {
         <span class="ident">SLEEPDEEP_W</span> { <span class="ident">w</span>: <span class="self">self</span> }
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 1 - Indicates sleep-on-exit when returning from Handler mode to Thread mode:\\n 0 = Do not sleep when returning to Thread mode.\\n 1 = Enter sleep, or deep sleep, on return from an ISR to Thread mode.\\n Setting this bit to 1 enables an interrupt driven application to avoid returning to an empty main application.&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 1 - Indicates sleep-on-exit when returning from Handler mode to Thread mode:  
+ 0 = Do not sleep when returning to Thread mode.  
+ 1 = Enter sleep, or deep sleep, on return from an ISR to Thread mode.  
+ Setting this bit to 1 enables an interrupt driven application to avoid returning to an empty main application.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">sleeponexit</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">SLEEPONEXIT_W</span> {
         <span class="ident">SLEEPONEXIT_W</span> { <span class="ident">w</span>: <span class="self">self</span> }

@@ -467,6 +467,38 @@
 <span id="464">464</span>
 <span id="465">465</span>
 <span id="466">466</span>
+<span id="467">467</span>
+<span id="468">468</span>
+<span id="469">469</span>
+<span id="470">470</span>
+<span id="471">471</span>
+<span id="472">472</span>
+<span id="473">473</span>
+<span id="474">474</span>
+<span id="475">475</span>
+<span id="476">476</span>
+<span id="477">477</span>
+<span id="478">478</span>
+<span id="479">479</span>
+<span id="480">480</span>
+<span id="481">481</span>
+<span id="482">482</span>
+<span id="483">483</span>
+<span id="484">484</span>
+<span id="485">485</span>
+<span id="486">486</span>
+<span id="487">487</span>
+<span id="488">488</span>
+<span id="489">489</span>
+<span id="490">490</span>
+<span id="491">491</span>
+<span id="492">492</span>
+<span id="493">493</span>
+<span id="494">494</span>
+<span id="495">495</span>
+<span id="496">496</span>
+<span id="497">497</span>
+<span id="498">498</span>
 </pre><div class="example-wrap"><pre class="rust ">
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Reader of register SIE_STATUS&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">R</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">R</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="kw">super</span>::<span class="ident">SIE_STATUS</span><span class="op">&gt;</span>;
@@ -781,7 +813,15 @@
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Reader of field `VBUS_DETECTED`&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">VBUS_DETECTED_R</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">R</span><span class="op">&lt;</span><span class="ident">bool</span>, <span class="ident">bool</span><span class="op">&gt;</span>;
 <span class="kw">impl</span> <span class="ident">R</span> {
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 31 - Data Sequence Error.\\n\\n The device can raise a sequence error in the following conditions:\\n\\n * A SETUP packet is received followed by a DATA1 packet (data phase should always be DATA0) * An OUT packet is received from the host but doesn&#39;t match the data pid in the buffer control register read from DPSRAM\\n\\n The host can raise a data sequence error in the following conditions:\\n\\n * An IN packet from the device has the wrong data PID&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 31 - Data Sequence Error.
+
+ The device can raise a sequence error in the following conditions:
+
+ * A SETUP packet is received followed by a DATA1 packet (data phase should always be DATA0) * An OUT packet is received from the host but doesn&#39;t match the data pid in the buffer control register read from DPSRAM
+
+ The host can raise a data sequence error in the following conditions:
+
+ * An IN packet from the device has the wrong data PID&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">data_seq_error</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">DATA_SEQ_ERROR_R</span> {
         <span class="ident">DATA_SEQ_ERROR_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">31</span>) <span class="op">&amp;</span> <span class="number">0x01</span>) <span class="op">!</span><span class="op">=</span> <span class="number">0</span>)
@@ -826,7 +866,15 @@
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">bus_reset</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">BUS_RESET_R</span> {
         <span class="ident">BUS_RESET_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">19</span>) <span class="op">&amp;</span> <span class="number">0x01</span>) <span class="op">!</span><span class="op">=</span> <span class="number">0</span>)
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 18 - Transaction complete.\\n\\n Raised by device if:\\n\\n * An IN or OUT packet is sent with the `LAST_BUFF` bit set in the buffer control register\\n\\n Raised by host if:\\n\\n * A setup packet is sent when no data in or data out transaction follows * An IN packet is received and the `LAST_BUFF` bit is set in the buffer control register * An IN packet is received with zero length * An OUT packet is sent and the `LAST_BUFF` bit is set&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 18 - Transaction complete.
+
+ Raised by device if:
+
+ * An IN or OUT packet is sent with the `LAST_BUFF` bit set in the buffer control register
+
+ Raised by host if:
+
+ * A setup packet is sent when no data in or data out transaction follows * An IN packet is received and the `LAST_BUFF` bit is set in the buffer control register * An IN packet is received with zero length * An OUT packet is sent and the `LAST_BUFF` bit is set&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">trans_complete</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">TRANS_COMPLETE_R</span> {
         <span class="ident">TRANS_COMPLETE_R</span>::<span class="ident">new</span>(((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&gt;</span><span class="op">&gt;</span> <span class="number">18</span>) <span class="op">&amp;</span> <span class="number">0x01</span>) <span class="op">!</span><span class="op">=</span> <span class="number">0</span>)
@@ -873,7 +921,15 @@
     }
 }
 <span class="kw">impl</span> <span class="ident">W</span> {
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 31 - Data Sequence Error.\\n\\n The device can raise a sequence error in the following conditions:\\n\\n * A SETUP packet is received followed by a DATA1 packet (data phase should always be DATA0) * An OUT packet is received from the host but doesn&#39;t match the data pid in the buffer control register read from DPSRAM\\n\\n The host can raise a data sequence error in the following conditions:\\n\\n * An IN packet from the device has the wrong data PID&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 31 - Data Sequence Error.
+
+ The device can raise a sequence error in the following conditions:
+
+ * A SETUP packet is received followed by a DATA1 packet (data phase should always be DATA0) * An OUT packet is received from the host but doesn&#39;t match the data pid in the buffer control register read from DPSRAM
+
+ The host can raise a data sequence error in the following conditions:
+
+ * An IN packet from the device has the wrong data PID&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">data_seq_error</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">DATA_SEQ_ERROR_W</span> {
         <span class="ident">DATA_SEQ_ERROR_W</span> { <span class="ident">w</span>: <span class="self">self</span> }
@@ -918,7 +974,15 @@
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">bus_reset</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">BUS_RESET_W</span> {
         <span class="ident">BUS_RESET_W</span> { <span class="ident">w</span>: <span class="self">self</span> }
     }
-    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 18 - Transaction complete.\\n\\n Raised by device if:\\n\\n * An IN or OUT packet is sent with the `LAST_BUFF` bit set in the buffer control register\\n\\n Raised by host if:\\n\\n * A setup packet is sent when no data in or data out transaction follows * An IN packet is received and the `LAST_BUFF` bit is set in the buffer control register * An IN packet is received with zero length * An OUT packet is sent and the `LAST_BUFF` bit is set&quot;</span>]</span>
+    <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bit 18 - Transaction complete.
+
+ Raised by device if:
+
+ * An IN or OUT packet is sent with the `LAST_BUFF` bit set in the buffer control register
+
+ Raised by host if:
+
+ * A setup packet is sent when no data in or data out transaction follows * An IN packet is received and the `LAST_BUFF` bit is set in the buffer control register * An IN packet is received with zero length * An OUT packet is sent and the `LAST_BUFF` bit is set&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">trans_complete</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">TRANS_COMPLETE_W</span> {
         <span class="ident">TRANS_COMPLETE_W</span> { <span class="ident">w</span>: <span class="self">self</span> }

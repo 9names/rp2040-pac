@@ -45,6 +45,14 @@
 <span id="42">42</span>
 <span id="43">43</span>
 <span id="44">44</span>
+<span id="45">45</span>
+<span id="46">46</span>
+<span id="47">47</span>
+<span id="48">48</span>
+<span id="49">49</span>
+<span id="50">50</span>
+<span id="51">51</span>
+<span id="52">52</span>
 </pre><div class="example-wrap"><pre class="rust ">
 <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Reader of register IC_SAR&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">R</span> <span class="op">=</span> <span class="kw">crate</span>::<span class="ident">R</span><span class="op">&lt;</span><span class="ident">u32</span>, <span class="kw">super</span>::<span class="ident">IC_SAR</span><span class="op">&gt;</span>;
@@ -74,8 +82,12 @@
 }
 <span class="kw">impl</span> <span class="ident">R</span> {
     <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 0:9 - The IC_SAR holds the slave address when the I2C is operating as a slave. For 7-bit addressing, only IC_SAR\\[6:0\\]
-is used.\\n\\n This register can be written only when the I2C interface is disabled, which corresponds to the IC_ENABLE\\[0\\]
-register being set to 0. Writes at other times have no effect.\\n\\n Note: The default values cannot be any of the reserved address locations: that is, 0x00 to 0x07, or 0x78 to 0x7f. The correct operation of the device is not guaranteed if you program the IC_SAR or IC_TAR to a reserved value. Refer to &lt;&lt;table_I2C_firstbyte_bit_defs&gt;&gt; for a complete list of these reserved values.&quot;</span>]</span>
+is used.
+
+ This register can be written only when the I2C interface is disabled, which corresponds to the IC_ENABLE\\[0\\]
+register being set to 0. Writes at other times have no effect.
+
+ Note: The default values cannot be any of the reserved address locations: that is, 0x00 to 0x07, or 0x78 to 0x7f. The correct operation of the device is not guaranteed if you program the IC_SAR or IC_TAR to a reserved value. Refer to &lt;&lt;table_I2C_firstbyte_bit_defs&gt;&gt; for a complete list of these reserved values.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">ic_sar</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">IC_SAR_R</span> {
         <span class="ident">IC_SAR_R</span>::<span class="ident">new</span>((<span class="self">self</span>.<span class="ident">bits</span> <span class="op">&amp;</span> <span class="number">0x03ff</span>) <span class="kw">as</span> <span class="ident">u16</span>)
@@ -83,8 +95,12 @@ register being set to 0. Writes at other times have no effect.\\n\\n Note: The d
 }
 <span class="kw">impl</span> <span class="ident">W</span> {
     <span class="attribute">#[<span class="ident">doc</span> <span class="op">=</span> <span class="string">&quot;Bits 0:9 - The IC_SAR holds the slave address when the I2C is operating as a slave. For 7-bit addressing, only IC_SAR\\[6:0\\]
-is used.\\n\\n This register can be written only when the I2C interface is disabled, which corresponds to the IC_ENABLE\\[0\\]
-register being set to 0. Writes at other times have no effect.\\n\\n Note: The default values cannot be any of the reserved address locations: that is, 0x00 to 0x07, or 0x78 to 0x7f. The correct operation of the device is not guaranteed if you program the IC_SAR or IC_TAR to a reserved value. Refer to &lt;&lt;table_I2C_firstbyte_bit_defs&gt;&gt; for a complete list of these reserved values.&quot;</span>]</span>
+is used.
+
+ This register can be written only when the I2C interface is disabled, which corresponds to the IC_ENABLE\\[0\\]
+register being set to 0. Writes at other times have no effect.
+
+ Note: The default values cannot be any of the reserved address locations: that is, 0x00 to 0x07, or 0x78 to 0x7f. The correct operation of the device is not guaranteed if you program the IC_SAR or IC_TAR to a reserved value. Refer to &lt;&lt;table_I2C_firstbyte_bit_defs&gt;&gt; for a complete list of these reserved values.&quot;</span>]</span>
     <span class="attribute">#[<span class="ident">inline</span>(<span class="ident">always</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">ic_sar</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">IC_SAR_W</span> {
         <span class="ident">IC_SAR_W</span> { <span class="ident">w</span>: <span class="self">self</span> }
