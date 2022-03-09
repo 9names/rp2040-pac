@@ -31,7 +31,7 @@ use core::ops::Deref;
 #[doc = r"Number available in the NVIC for configuring priority"]
 pub const NVIC_PRIO_BITS: u8 = 2;
 #[cfg(feature = "rt")]
-pub use self::Interrupt as interrupt;
+pub use self::Interrupt;
 pub use cortex_m::peripheral::Peripherals as CorePeripherals;
 pub use cortex_m::peripheral::{CBP, CPUID, DCB, DWT, FPB, ITM, MPU, NVIC, SCB, SYST, TPIU};
 #[cfg(feature = "rt")]
