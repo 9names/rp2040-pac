@@ -39,7 +39,7 @@ pub type TRANS_TYPE_R = crate::FieldReader<u8, TRANS_TYPE_A>;
 #[doc = "Address and instruction transfer format  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum TRANS_TYPE_A {
     #[doc = "0: Command and address both in standard SPI frame format"]
@@ -111,7 +111,7 @@ pub type INST_L_R = crate::FieldReader<u8, INST_L_A>;
 #[doc = "Instruction length (0/4/8/16b)  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum INST_L_A {
     #[doc = "0: No instruction"]

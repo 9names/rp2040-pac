@@ -39,7 +39,7 @@ pub type FREQ_RANGE_R = crate::FieldReader<u8, FREQ_RANGE_A>;
 #[doc = "The current frequency range setting, always reads 0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum FREQ_RANGE_A {
     #[doc = "0: `0`"]

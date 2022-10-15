@@ -18,7 +18,7 @@ pub type ACTIVITY_R = crate::BitReader<ACTIVITY_A>;
 #[doc = "I2C Activity Status. Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ACTIVITY_A {
     #[doc = "0: I2C is idle"]
     INACTIVE = 0,
@@ -56,7 +56,7 @@ pub type TFNF_R = crate::BitReader<TFNF_A>;
 #[doc = "Transmit FIFO Not Full. Set when the transmit FIFO contains one or more empty locations, and is cleared when the FIFO is full. - 0: Transmit FIFO is full - 1: Transmit FIFO is not full Reset value: 0x1  
 
 Value on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum TFNF_A {
     #[doc = "0: Tx FIFO is full"]
     FULL = 0,
@@ -94,7 +94,7 @@ pub type TFE_R = crate::BitReader<TFE_A>;
 #[doc = "Transmit FIFO Completely Empty. When the transmit FIFO is completely empty, this bit is set. When it contains one or more valid entries, this bit is cleared. This bit field does not request an interrupt. - 0: Transmit FIFO is not empty - 1: Transmit FIFO is empty Reset value: 0x1  
 
 Value on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum TFE_A {
     #[doc = "0: Tx FIFO not empty"]
     NON_EMPTY = 0,
@@ -132,7 +132,7 @@ pub type RFNE_R = crate::BitReader<RFNE_A>;
 #[doc = "Receive FIFO Not Empty. This bit is set when the receive FIFO contains one or more entries; it is cleared when the receive FIFO is empty. - 0: Receive FIFO is empty - 1: Receive FIFO is not empty Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RFNE_A {
     #[doc = "0: Rx FIFO is empty"]
     EMPTY = 0,
@@ -170,7 +170,7 @@ pub type RFF_R = crate::BitReader<RFF_A>;
 #[doc = "Receive FIFO Completely Full. When the receive FIFO is completely full, this bit is set. When the receive FIFO contains one or more empty location, this bit is cleared. - 0: Receive FIFO is not full - 1: Receive FIFO is full Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RFF_A {
     #[doc = "0: Rx FIFO not full"]
     NOT_FULL = 0,
@@ -212,7 +212,7 @@ pub type MST_ACTIVITY_R = crate::BitReader<MST_ACTIVITY_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum MST_ACTIVITY_A {
     #[doc = "0: Master is idle"]
     IDLE = 0,
@@ -250,7 +250,7 @@ pub type SLV_ACTIVITY_R = crate::BitReader<SLV_ACTIVITY_A>;
 #[doc = "Slave FSM Activity Status. When the Slave Finite State Machine (FSM) is not in the IDLE state, this bit is set. - 0: Slave FSM is in IDLE state so the Slave part of DW_apb_i2c is not Active - 1: Slave FSM is not in IDLE state so the Slave part of DW_apb_i2c is Active Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum SLV_ACTIVITY_A {
     #[doc = "0: Slave is idle"]
     IDLE = 0,

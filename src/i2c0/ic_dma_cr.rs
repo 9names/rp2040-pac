@@ -39,7 +39,7 @@ pub type RDMAE_R = crate::BitReader<RDMAE_A>;
 #[doc = "Receive DMA Enable. This bit enables/disables the receive FIFO DMA channel. Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RDMAE_A {
     #[doc = "0: Receive FIFO DMA channel disabled"]
     DISABLED = 0,
@@ -91,7 +91,7 @@ pub type TDMAE_R = crate::BitReader<TDMAE_A>;
 #[doc = "Transmit DMA Enable. This bit enables/disables the transmit FIFO DMA channel. Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum TDMAE_A {
     #[doc = "0: transmit FIFO DMA channel disabled"]
     DISABLED = 0,

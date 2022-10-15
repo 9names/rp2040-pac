@@ -53,7 +53,7 @@ pub type DATA_SIZE_R = crate::FieldReader<u8, DATA_SIZE_A>;
 #[doc = "Set the size of each bus transfer (byte/halfword/word). READ_ADDR and WRITE_ADDR advance by this amount (1/2/4 bytes) with each transfer.  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum DATA_SIZE_A {
     #[doc = "0: `0`"]
@@ -141,7 +141,7 @@ pub type RING_SIZE_R = crate::FieldReader<u8, RING_SIZE_A>;
  Ring sizes between 2 and 32768 bytes are possible. This can apply to either read or write addresses, based on value of RING_SEL.  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum RING_SIZE_A {
     #[doc = "0: `0`"]
@@ -201,7 +201,7 @@ pub type TREQ_SEL_R = crate::FieldReader<u8, TREQ_SEL_A>;
  0x0 to 0x3a -> select DREQ n as TREQ  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum TREQ_SEL_A {
     #[doc = "0: Select PIO0's TX FIFO 0 as TREQ"]

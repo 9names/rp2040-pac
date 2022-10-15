@@ -39,7 +39,7 @@ pub type FUNCSEL_R = crate::FieldReader<u8, FUNCSEL_A>;
 #[doc = "0-31 -> selects pin function according to the GPIO table. Not all options are valid for all GPIO pins.  
 
 Value on reset: 31"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum FUNCSEL_A {
     #[doc = "0: Connect to JTAG peripheral"]
@@ -211,7 +211,7 @@ pub type OUTOVER_R = crate::FieldReader<u8, OUTOVER_A>;
 #[doc = "  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum OUTOVER_A {
     #[doc = "0: drive output from peripheral signal selected by funcsel"]
@@ -292,7 +292,7 @@ pub type OEOVER_R = crate::FieldReader<u8, OEOVER_A>;
 #[doc = "  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum OEOVER_A {
     #[doc = "0: drive output enable from peripheral signal selected by funcsel"]
@@ -373,7 +373,7 @@ pub type INOVER_R = crate::FieldReader<u8, INOVER_A>;
 #[doc = "  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum INOVER_A {
     #[doc = "0: don't invert the peri input"]
@@ -454,7 +454,7 @@ pub type IRQOVER_R = crate::FieldReader<u8, IRQOVER_A>;
 #[doc = "  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum IRQOVER_A {
     #[doc = "0: don't invert the interrupt"]

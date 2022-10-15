@@ -43,7 +43,7 @@ pub type M_RX_UNDER_R = crate::BitReader<M_RX_UNDER_A>;
  Reset value: 0x1  
 
 Value on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum M_RX_UNDER_A {
     #[doc = "0: RX_UNDER interrupt is masked"]
     ENABLED = 0,
@@ -102,7 +102,7 @@ pub type M_RX_OVER_R = crate::BitReader<M_RX_OVER_A>;
  Reset value: 0x1  
 
 Value on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum M_RX_OVER_A {
     #[doc = "0: RX_OVER interrupt is masked"]
     ENABLED = 0,
@@ -161,7 +161,7 @@ pub type M_RX_FULL_R = crate::BitReader<M_RX_FULL_A>;
  Reset value: 0x1  
 
 Value on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum M_RX_FULL_A {
     #[doc = "0: RX_FULL interrupt is masked"]
     ENABLED = 0,
@@ -220,7 +220,7 @@ pub type M_TX_OVER_R = crate::BitReader<M_TX_OVER_A>;
  Reset value: 0x1  
 
 Value on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum M_TX_OVER_A {
     #[doc = "0: TX_OVER interrupt is masked"]
     ENABLED = 0,
@@ -279,7 +279,7 @@ pub type M_TX_EMPTY_R = crate::BitReader<M_TX_EMPTY_A>;
  Reset value: 0x1  
 
 Value on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum M_TX_EMPTY_A {
     #[doc = "0: TX_EMPTY interrupt is masked"]
     ENABLED = 0,
@@ -338,7 +338,7 @@ pub type M_RD_REQ_R = crate::BitReader<M_RD_REQ_A>;
  Reset value: 0x1  
 
 Value on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum M_RD_REQ_A {
     #[doc = "0: RD_REQ interrupt is masked"]
     ENABLED = 0,
@@ -396,7 +396,7 @@ pub type M_TX_ABRT_R = crate::BitReader<M_TX_ABRT_A>;
  Reset value: 0x1  
 
 Value on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum M_TX_ABRT_A {
     #[doc = "0: TX_ABORT interrupt is masked"]
     ENABLED = 0,
@@ -455,7 +455,7 @@ pub type M_RX_DONE_R = crate::BitReader<M_RX_DONE_A>;
  Reset value: 0x1  
 
 Value on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum M_RX_DONE_A {
     #[doc = "0: RX_DONE interrupt is masked"]
     ENABLED = 0,
@@ -514,7 +514,7 @@ pub type M_ACTIVITY_R = crate::BitReader<M_ACTIVITY_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum M_ACTIVITY_A {
     #[doc = "0: ACTIVITY interrupt is masked"]
     ENABLED = 0,
@@ -573,7 +573,7 @@ pub type M_STOP_DET_R = crate::BitReader<M_STOP_DET_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum M_STOP_DET_A {
     #[doc = "0: STOP_DET interrupt is masked"]
     ENABLED = 0,
@@ -632,7 +632,7 @@ pub type M_START_DET_R = crate::BitReader<M_START_DET_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum M_START_DET_A {
     #[doc = "0: START_DET interrupt is masked"]
     ENABLED = 0,
@@ -691,7 +691,7 @@ pub type M_GEN_CALL_R = crate::BitReader<M_GEN_CALL_A>;
  Reset value: 0x1  
 
 Value on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum M_GEN_CALL_A {
     #[doc = "0: GEN_CALL interrupt is masked"]
     ENABLED = 0,
@@ -750,7 +750,7 @@ pub type M_RESTART_DET_R = crate::BitReader<M_RESTART_DET_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum M_RESTART_DET_A {
     #[doc = "0: RESTART_DET interrupt is masked"]
     ENABLED = 0,

@@ -43,7 +43,7 @@ pub type NACK_R = crate::BitReader<NACK_A>;
  When the register is set to a value of 0, it generates NACK/ACK, depending on normal criteria. - 1: generate NACK after data byte received - 0: generate NACK/ACK normally Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum NACK_A {
     #[doc = "0: Slave receiver generates NACK normally"]
     DISABLED = 0,

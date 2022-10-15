@@ -57,7 +57,7 @@ pub type PASSWD_R = crate::FieldReader<u16, PASSWD_A>;
  Any other value in this field will set all drive strengths to 0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u16)]
 pub enum PASSWD_A {
     #[doc = "38550: `1001011010010110`"]

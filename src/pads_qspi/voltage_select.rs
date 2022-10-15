@@ -39,7 +39,7 @@ pub type VOLTAGE_SELECT_R = crate::BitReader<VOLTAGE_SELECT_A>;
 #[doc = "  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum VOLTAGE_SELECT_A {
     #[doc = "0: Set voltage to 3.3V (DVDD >= 2V5)"]
     _3V3 = 0,

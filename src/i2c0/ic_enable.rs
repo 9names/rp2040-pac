@@ -51,7 +51,7 @@ pub type ENABLE_R = crate::BitReader<ENABLE_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ENABLE_A {
     #[doc = "0: I2C is disabled"]
     DISABLED = 0,
@@ -117,7 +117,7 @@ pub type ABORT_R = crate::BitReader<ABORT_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ABORT_A {
     #[doc = "0: ABORT operation not in progress"]
     DISABLE = 0,
@@ -175,7 +175,7 @@ pub type TX_CMD_BLOCK_R = crate::BitReader<TX_CMD_BLOCK_A>;
 == 0). Any further commands put in the Tx FIFO are not executed until TX_CMD_BLOCK bit is unset. Reset value: IC_TX_CMD_BLOCK_DEFAULT  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum TX_CMD_BLOCK_A {
     #[doc = "0: Tx Command execution not blocked"]
     NOT_BLOCKED = 0,

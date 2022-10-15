@@ -25,7 +25,7 @@ pub struct RegisterBlock {
     pub dormant_wake_ints: [DORMANT_WAKE_INTS; 4],
 }
 #[doc = "Cluster GPIO%s, containing GPIO*_STATUS, GPIO*_CTRL"]
-pub use self::gpio::GPIO;
+pub use gpio::GPIO;
 #[doc = r"Cluster"]
 #[doc = "Cluster GPIO%s, containing GPIO*_STATUS, GPIO*_CTRL"]
 pub mod gpio;

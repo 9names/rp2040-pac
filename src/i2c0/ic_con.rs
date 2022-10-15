@@ -43,7 +43,7 @@ pub type MASTER_MODE_R = crate::BitReader<MASTER_MODE_A>;
  NOTE: Software should ensure that if this bit is written with '1' then bit 6 should also be written with a '1'.  
 
 Value on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum MASTER_MODE_A {
     #[doc = "0: Master mode is disabled"]
     DISABLED = 0,
@@ -117,7 +117,7 @@ pub type SPEED_R = crate::FieldReader<u8, SPEED_A>;
  Note: This field is not applicable when IC_ULTRA_FAST_MODE=1  
 
 Value on reset: 2"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum SPEED_A {
     #[doc = "1: Standard Speed mode of operation"]
@@ -194,7 +194,7 @@ pub type IC_10BITADDR_SLAVE_R = crate::BitReader<IC_10BITADDR_SLAVE_A>;
 #[doc = "When acting as a slave, this bit controls whether the DW_apb_i2c responds to 7- or 10-bit addresses. - 0: 7-bit addressing. The DW_apb_i2c ignores transactions that involve 10-bit addressing; for 7-bit addressing, only the lower 7 bits of the IC_SAR register are compared. - 1: 10-bit addressing. The DW_apb_i2c responds to only 10-bit addressing transfers that match the full 10 bits of the IC_SAR register.  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum IC_10BITADDR_SLAVE_A {
     #[doc = "0: Slave 7Bit addressing"]
     ADDR_7BITS = 0,
@@ -247,7 +247,7 @@ pub type IC_10BITADDR_MASTER_R = crate::BitReader<IC_10BITADDR_MASTER_A>;
 #[doc = "Controls whether the DW_apb_i2c starts its transfers in 7- or 10-bit addressing mode when acting as a master. - 0: 7-bit addressing - 1: 10-bit addressing  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum IC_10BITADDR_MASTER_A {
     #[doc = "0: Master 7Bit addressing mode"]
     ADDR_7BITS = 0,
@@ -304,7 +304,7 @@ pub type IC_RESTART_EN_R = crate::BitReader<IC_RESTART_EN_A>;
  Reset value: ENABLED  
 
 Value on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum IC_RESTART_EN_A {
     #[doc = "0: Master restart disabled"]
     DISABLED = 0,
@@ -367,7 +367,7 @@ pub type IC_SLAVE_DISABLE_R = crate::BitReader<IC_SLAVE_DISABLE_A>;
  NOTE: Software should ensure that if this bit is written with 0, then bit 0 should also be written with a 0.  
 
 Value on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum IC_SLAVE_DISABLE_A {
     #[doc = "0: Slave mode is enabled"]
     SLAVE_ENABLED = 0,
@@ -428,7 +428,7 @@ pub type STOP_DET_IFADDRESSED_R = crate::BitReader<STOP_DET_IFADDRESSED_A>;
  NOTE: During a general call address, this slave does not issue the STOP_DET interrupt if STOP_DET_IF_ADDRESSED = 1'b1, even if the slave responds to the general call address by generating ACK. The STOP_DET interrupt is generated only when the transmitted address matches the slave address (SAR).  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum STOP_DET_IFADDRESSED_A {
     #[doc = "0: slave issues STOP_DET intr always"]
     DISABLED = 0,
@@ -487,7 +487,7 @@ pub type TX_EMPTY_CTRL_R = crate::BitReader<TX_EMPTY_CTRL_A>;
  Reset value: 0x0.  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum TX_EMPTY_CTRL_A {
     #[doc = "0: Default behaviour of TX_EMPTY interrupt"]
     DISABLED = 0,
@@ -546,7 +546,7 @@ pub type RX_FIFO_FULL_HLD_CTRL_R = crate::BitReader<RX_FIFO_FULL_HLD_CTRL_A>;
  Reset value: 0x0.  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RX_FIFO_FULL_HLD_CTRL_A {
     #[doc = "0: Overflow when RX_FIFO is full"]
     DISABLED = 0,

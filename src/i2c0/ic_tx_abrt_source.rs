@@ -26,7 +26,7 @@ pub type ABRT_7B_ADDR_NOACK_R = crate::BitReader<ABRT_7B_ADDR_NOACK_A>;
  Role of DW_apb_i2c: Master-Transmitter or Master-Receiver  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ABRT_7B_ADDR_NOACK_A {
     #[doc = "0: This abort is not generated"]
     INACTIVE = 0,
@@ -72,7 +72,7 @@ pub type ABRT_10ADDR1_NOACK_R = crate::BitReader<ABRT_10ADDR1_NOACK_A>;
  Role of DW_apb_i2c: Master-Transmitter or Master-Receiver  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ABRT_10ADDR1_NOACK_A {
     #[doc = "0: This abort is not generated"]
     INACTIVE = 0,
@@ -118,7 +118,7 @@ pub type ABRT_10ADDR2_NOACK_R = crate::BitReader<ABRT_10ADDR2_NOACK_A>;
  Role of DW_apb_i2c: Master-Transmitter or Master-Receiver  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ABRT_10ADDR2_NOACK_A {
     #[doc = "0: This abort is not generated"]
     INACTIVE = 0,
@@ -164,7 +164,7 @@ pub type ABRT_TXDATA_NOACK_R = crate::BitReader<ABRT_TXDATA_NOACK_A>;
  Role of DW_apb_i2c: Master-Transmitter  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ABRT_TXDATA_NOACK_A {
     #[doc = "0: Transmitted data non-ACKed by addressed slave-scenario not present"]
     ABRT_TXDATA_NOACK_VOID = 0,
@@ -210,7 +210,7 @@ pub type ABRT_GCALL_NOACK_R = crate::BitReader<ABRT_GCALL_NOACK_A>;
  Role of DW_apb_i2c: Master-Transmitter  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ABRT_GCALL_NOACK_A {
     #[doc = "0: GCALL not ACKed by any slave-scenario not present"]
     ABRT_GCALL_NOACK_VOID = 0,
@@ -258,7 +258,7 @@ is set to 1).
  Role of DW_apb_i2c: Master-Transmitter  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ABRT_GCALL_READ_A {
     #[doc = "0: GCALL is followed by read from bus-scenario not present"]
     ABRT_GCALL_READ_VOID = 0,
@@ -304,7 +304,7 @@ pub type ABRT_HS_ACKDET_R = crate::BitReader<ABRT_HS_ACKDET_A>;
  Role of DW_apb_i2c: Master  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ABRT_HS_ACKDET_A {
     #[doc = "0: HS Master code ACKed in HS Mode- scenario not present"]
     ABRT_HS_ACK_VOID = 0,
@@ -350,7 +350,7 @@ pub type ABRT_SBYTE_ACKDET_R = crate::BitReader<ABRT_SBYTE_ACKDET_A>;
  Role of DW_apb_i2c: Master  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ABRT_SBYTE_ACKDET_A {
     #[doc = "0: ACK detected for START byte- scenario not present"]
     ABRT_SBYTE_ACKDET_VOID = 0,
@@ -396,7 +396,7 @@ pub type ABRT_HS_NORSTRT_R = crate::BitReader<ABRT_HS_NORSTRT_A>;
  Role of DW_apb_i2c: Master-Transmitter or Master-Receiver  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ABRT_HS_NORSTRT_A {
     #[doc = "0: User trying to switch Master to HS mode when RESTART disabled- scenario not present"]
     ABRT_HS_NORSTRT_VOID = 0,
@@ -442,7 +442,7 @@ pub type ABRT_SBYTE_NORSTRT_R = crate::BitReader<ABRT_SBYTE_NORSTRT_A>;
  Role of DW_apb_i2c: Master  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ABRT_SBYTE_NORSTRT_A {
     #[doc = "0: User trying to send START byte when RESTART disabled- scenario not present"]
     ABRT_SBYTE_NORSTRT_VOID = 0,
@@ -488,7 +488,7 @@ pub type ABRT_10B_RD_NORSTRT_R = crate::BitReader<ABRT_10B_RD_NORSTRT_A>;
  Role of DW_apb_i2c: Master-Receiver  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ABRT_10B_RD_NORSTRT_A {
     #[doc = "0: Master not trying to read in 10Bit addressing mode when RESTART disabled"]
     ABRT_10B_RD_VOID = 0,
@@ -534,7 +534,7 @@ pub type ABRT_MASTER_DIS_R = crate::BitReader<ABRT_MASTER_DIS_A>;
  Role of DW_apb_i2c: Master-Transmitter or Master-Receiver  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ABRT_MASTER_DIS_A {
     #[doc = "0: User initiating master operation when MASTER disabled- scenario not present"]
     ABRT_MASTER_DIS_VOID = 0,
@@ -582,7 +582,7 @@ is also set, then the slave transmitter has lost arbitration.
  Role of DW_apb_i2c: Master-Transmitter or Slave-Transmitter  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ARB_LOST_A {
     #[doc = "0: Master or Slave-Transmitter lost arbitration- scenario not present"]
     ABRT_LOST_VOID = 0,
@@ -628,7 +628,7 @@ pub type ABRT_SLVFLUSH_TXFIFO_R = crate::BitReader<ABRT_SLVFLUSH_TXFIFO_A>;
  Role of DW_apb_i2c: Slave-Transmitter  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ABRT_SLVFLUSH_TXFIFO_A {
     #[doc = "0: Slave flushes existing data in TX-FIFO upon getting read command- scenario not present"]
     ABRT_SLVFLUSH_TXFIFO_VOID = 0,
@@ -676,7 +676,7 @@ is set at the same time. Note: Even though the slave never 'owns' the bus, somet
  Role of DW_apb_i2c: Slave-Transmitter  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ABRT_SLV_ARBLOST_A {
     #[doc = "0: Slave lost arbitration to remote master- scenario not present"]
     ABRT_SLV_ARBLOST_VOID = 0,
@@ -722,7 +722,7 @@ pub type ABRT_SLVRD_INTX_R = crate::BitReader<ABRT_SLVRD_INTX_A>;
  Role of DW_apb_i2c: Slave-Transmitter  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ABRT_SLVRD_INTX_A {
     #[doc = "0: Slave trying to transmit to remote master in read mode- scenario not present"]
     ABRT_SLVRD_INTX_VOID = 0,
@@ -768,7 +768,7 @@ pub type ABRT_USER_ABRT_R = crate::BitReader<ABRT_USER_ABRT_A>;
  Role of DW_apb_i2c: Master-Transmitter  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ABRT_USER_ABRT_A {
     #[doc = "0: Transfer abort detected by master- scenario not present"]
     ABRT_USER_ABRT_VOID = 0,

@@ -81,7 +81,7 @@ pub type DOUBLE_BUFFER_ISO_OFFSET_R = crate::FieldReader<u8, DOUBLE_BUFFER_ISO_O
  For a non Isochronous endpoint the offset is always 64 bytes.  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum DOUBLE_BUFFER_ISO_OFFSET_A {
     #[doc = "0: `0`"]

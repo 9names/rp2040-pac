@@ -43,7 +43,7 @@ pub type STATUS_SEL_R = crate::BitReader<STATUS_SEL_A>;
 #[doc = "Comparison used for the MOV x, STATUS instruction.  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum STATUS_SEL_A {
     #[doc = "0: All-ones if TX FIFO level < N, otherwise all-zeroes"]
     TXLEVEL = 0,

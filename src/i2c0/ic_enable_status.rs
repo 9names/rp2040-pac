@@ -22,7 +22,7 @@ pub type IC_EN_R = crate::BitReader<IC_EN_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum IC_EN_A {
     #[doc = "0: I2C disabled"]
     DISABLED = 0,
@@ -94,7 +94,7 @@ has been set to 0, then this bit will also be set to 1.
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum SLV_DISABLED_WHILE_BUSY_A {
     #[doc = "0: Slave is disabled when it is idle"]
     INACTIVE = 0,
@@ -150,7 +150,7 @@ has been set to 0, then this bit is also set to 1.
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum SLV_RX_DATA_LOST_A {
     #[doc = "0: Slave RX Data is not lost"]
     INACTIVE = 0,

@@ -41,12 +41,12 @@ pub struct RegisterBlock {
     pub sm_irq: [SM_IRQ; 2],
 }
 #[doc = "Cluster SM%s, containing SM*_CLKDIV, SM*_EXECCTRL, SM*_SHIFTCTRL, SM*_ADDR, SM*_INSTR, SM*_PINCTRL"]
-pub use self::sm::SM;
+pub use sm::SM;
 #[doc = r"Cluster"]
 #[doc = "Cluster SM%s, containing SM*_CLKDIV, SM*_EXECCTRL, SM*_SHIFTCTRL, SM*_ADDR, SM*_INSTR, SM*_PINCTRL"]
 pub mod sm;
 #[doc = "Cluster SM_IRQ%s, containing IRQ*_INTE, IRQ*_INTF, IRQ*_INTS"]
-pub use self::sm_irq::SM_IRQ;
+pub use sm_irq::SM_IRQ;
 #[doc = r"Cluster"]
 #[doc = "Cluster SM_IRQ%s, containing IRQ*_INTE, IRQ*_INTF, IRQ*_INTS"]
 pub mod sm_irq;

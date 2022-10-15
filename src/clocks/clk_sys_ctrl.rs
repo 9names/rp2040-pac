@@ -39,7 +39,7 @@ pub type SRC_R = crate::BitReader<SRC_A>;
 #[doc = "Selects the clock source glitchlessly, can be changed on-the-fly  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum SRC_A {
     #[doc = "0: `0`"]
     CLK_REF = 0,
@@ -91,7 +91,7 @@ pub type AUXSRC_R = crate::FieldReader<u8, AUXSRC_A>;
 #[doc = "Selects the auxiliary clock source, will glitch when switching  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum AUXSRC_A {
     #[doc = "0: `0`"]

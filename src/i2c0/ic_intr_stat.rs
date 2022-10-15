@@ -22,7 +22,7 @@ pub type R_RX_UNDER_R = crate::BitReader<R_RX_UNDER_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum R_RX_UNDER_A {
     #[doc = "0: RX_UNDER interrupt is inactive"]
     INACTIVE = 0,
@@ -64,7 +64,7 @@ pub type R_RX_OVER_R = crate::BitReader<R_RX_OVER_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum R_RX_OVER_A {
     #[doc = "0: R_RX_OVER interrupt is inactive"]
     INACTIVE = 0,
@@ -106,7 +106,7 @@ pub type R_RX_FULL_R = crate::BitReader<R_RX_FULL_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum R_RX_FULL_A {
     #[doc = "0: R_RX_FULL interrupt is inactive"]
     INACTIVE = 0,
@@ -148,7 +148,7 @@ pub type R_TX_OVER_R = crate::BitReader<R_TX_OVER_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum R_TX_OVER_A {
     #[doc = "0: R_TX_OVER interrupt is inactive"]
     INACTIVE = 0,
@@ -190,7 +190,7 @@ pub type R_TX_EMPTY_R = crate::BitReader<R_TX_EMPTY_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum R_TX_EMPTY_A {
     #[doc = "0: R_TX_EMPTY interrupt is inactive"]
     INACTIVE = 0,
@@ -232,7 +232,7 @@ pub type R_RD_REQ_R = crate::BitReader<R_RD_REQ_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum R_RD_REQ_A {
     #[doc = "0: R_RD_REQ interrupt is inactive"]
     INACTIVE = 0,
@@ -274,7 +274,7 @@ pub type R_TX_ABRT_R = crate::BitReader<R_TX_ABRT_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum R_TX_ABRT_A {
     #[doc = "0: R_TX_ABRT interrupt is inactive"]
     INACTIVE = 0,
@@ -316,7 +316,7 @@ pub type R_RX_DONE_R = crate::BitReader<R_RX_DONE_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum R_RX_DONE_A {
     #[doc = "0: R_RX_DONE interrupt is inactive"]
     INACTIVE = 0,
@@ -358,7 +358,7 @@ pub type R_ACTIVITY_R = crate::BitReader<R_ACTIVITY_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum R_ACTIVITY_A {
     #[doc = "0: R_ACTIVITY interrupt is inactive"]
     INACTIVE = 0,
@@ -400,7 +400,7 @@ pub type R_STOP_DET_R = crate::BitReader<R_STOP_DET_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum R_STOP_DET_A {
     #[doc = "0: R_STOP_DET interrupt is inactive"]
     INACTIVE = 0,
@@ -442,7 +442,7 @@ pub type R_START_DET_R = crate::BitReader<R_START_DET_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum R_START_DET_A {
     #[doc = "0: R_START_DET interrupt is inactive"]
     INACTIVE = 0,
@@ -484,7 +484,7 @@ pub type R_GEN_CALL_R = crate::BitReader<R_GEN_CALL_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum R_GEN_CALL_A {
     #[doc = "0: R_GEN_CALL interrupt is inactive"]
     INACTIVE = 0,
@@ -526,7 +526,7 @@ pub type R_RESTART_DET_R = crate::BitReader<R_RESTART_DET_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum R_RESTART_DET_A {
     #[doc = "0: R_RESTART_DET interrupt is inactive"]
     INACTIVE = 0,

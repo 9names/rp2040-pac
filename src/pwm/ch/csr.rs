@@ -55,7 +55,7 @@ pub type DIVMODE_R = crate::FieldReader<u8, DIVMODE_A>;
 #[doc = "  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum DIVMODE_A {
     #[doc = "0: Free-running counting at rate dictated by fractional divider"]

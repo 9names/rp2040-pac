@@ -47,7 +47,7 @@ pub type CALC_R = crate::FieldReader<u8, CALC_A>;
 #[doc = "  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum CALC_A {
     #[doc = "0: Calculate a CRC-32 (IEEE802.3 polynomial)"]

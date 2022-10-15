@@ -41,7 +41,7 @@ pub type LINE_STATE_R = crate::FieldReader<u8, LINE_STATE_A>;
 #[doc = "USB bus line state  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum LINE_STATE_A {
     #[doc = "0: SE0"]

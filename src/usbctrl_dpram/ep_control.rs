@@ -53,7 +53,7 @@ pub type ENDPOINT_TYPE_R = crate::FieldReader<u8, ENDPOINT_TYPE_A>;
 #[doc = "  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum ENDPOINT_TYPE_A {
     #[doc = "0: `0`"]

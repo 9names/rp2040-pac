@@ -47,7 +47,7 @@ pub type DIV_R = crate::FieldReader<u16, DIV_A>;
  this register resets to div=16  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u16)]
 pub enum DIV_A {
     #[doc = "2720: `101010100000`"]

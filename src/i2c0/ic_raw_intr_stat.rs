@@ -22,7 +22,7 @@ pub type RX_UNDER_R = crate::BitReader<RX_UNDER_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RX_UNDER_A {
     #[doc = "0: RX_UNDER interrupt is inactive"]
     INACTIVE = 0,
@@ -68,7 +68,7 @@ pub type RX_OVER_R = crate::BitReader<RX_OVER_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RX_OVER_A {
     #[doc = "0: RX_OVER interrupt is inactive"]
     INACTIVE = 0,
@@ -110,7 +110,7 @@ pub type RX_FULL_R = crate::BitReader<RX_FULL_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RX_FULL_A {
     #[doc = "0: RX_FULL interrupt is inactive"]
     INACTIVE = 0,
@@ -152,7 +152,7 @@ pub type TX_OVER_R = crate::BitReader<TX_OVER_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum TX_OVER_A {
     #[doc = "0: TX_OVER interrupt is inactive"]
     INACTIVE = 0,
@@ -196,7 +196,7 @@ is set to 0, the TX FIFO is flushed and held in reset. There the TX FIFO looks l
  Reset value: 0x0.  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum TX_EMPTY_A {
     #[doc = "0: TX_EMPTY interrupt is inactive"]
     INACTIVE = 0,
@@ -238,7 +238,7 @@ pub type RD_REQ_R = crate::BitReader<RD_REQ_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RD_REQ_A {
     #[doc = "0: RD_REQ interrupt is inactive"]
     INACTIVE = 0,
@@ -284,7 +284,7 @@ pub type TX_ABRT_R = crate::BitReader<TX_ABRT_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum TX_ABRT_A {
     #[doc = "0: TX_ABRT interrupt is inactive"]
     INACTIVE = 0,
@@ -326,7 +326,7 @@ pub type RX_DONE_R = crate::BitReader<RX_DONE_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RX_DONE_A {
     #[doc = "0: RX_DONE interrupt is inactive"]
     INACTIVE = 0,
@@ -368,7 +368,7 @@ pub type ACTIVITY_R = crate::BitReader<ACTIVITY_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ACTIVITY_A {
     #[doc = "0: RAW_INTR_ACTIVITY interrupt is inactive"]
     INACTIVE = 0,
@@ -410,7 +410,7 @@ pub type STOP_DET_R = crate::BitReader<STOP_DET_A>;
  In Slave Mode: - If IC_CON\\[7\\]=1'b1 (STOP_DET_IFADDRESSED), the STOP_DET interrupt will be issued only if slave is addressed. Note: During a general call address, this slave does not issue a STOP_DET interrupt if STOP_DET_IF_ADDRESSED=1'b1, even if the slave responds to the general call address by generating ACK. The STOP_DET interrupt is generated only when the transmitted address matches the slave address (SAR). - If IC_CON\\[7\\]=1'b0 (STOP_DET_IFADDRESSED), the STOP_DET interrupt is issued irrespective of whether it is being addressed. In Master Mode: - If IC_CON\\[10\\]=1'b1 (STOP_DET_IF_MASTER_ACTIVE),the STOP_DET interrupt will be issued only if Master is active. - If IC_CON\\[10\\]=1'b0 (STOP_DET_IFADDRESSED),the STOP_DET interrupt will be issued irrespective of whether master is active or not. Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum STOP_DET_A {
     #[doc = "0: STOP_DET interrupt is inactive"]
     INACTIVE = 0,
@@ -452,7 +452,7 @@ pub type START_DET_R = crate::BitReader<START_DET_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum START_DET_A {
     #[doc = "0: START_DET interrupt is inactive"]
     INACTIVE = 0,
@@ -494,7 +494,7 @@ pub type GEN_CALL_R = crate::BitReader<GEN_CALL_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum GEN_CALL_A {
     #[doc = "0: GEN_CALL interrupt is inactive"]
     INACTIVE = 0,
@@ -540,7 +540,7 @@ pub type RESTART_DET_R = crate::BitReader<RESTART_DET_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RESTART_DET_A {
     #[doc = "0: RESTART_DET interrupt is inactive"]
     INACTIVE = 0,

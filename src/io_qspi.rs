@@ -57,7 +57,7 @@ impl RegisterBlock {
     }
 }
 #[doc = "Cluster GPIO_QSPI%s, containing GPIO_QSPI_*_STATUS, GPIO_QSPI_*_CTRL"]
-pub use self::gpio_qspi::GPIO_QSPI;
+pub use gpio_qspi::GPIO_QSPI;
 #[doc = r"Cluster"]
 #[doc = "Cluster GPIO_QSPI%s, containing GPIO_QSPI_*_STATUS, GPIO_QSPI_*_CTRL"]
 pub mod gpio_qspi;

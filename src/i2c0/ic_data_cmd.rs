@@ -59,7 +59,7 @@ pub type CMD_R = crate::BitReader<CMD_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum CMD_A {
     #[doc = "0: Master Write Command"]
     WRITE = 0,
@@ -121,7 +121,7 @@ pub type STOP_R = crate::BitReader<STOP_A>;
  - 1 - STOP is issued after this byte, regardless of whether or not the Tx FIFO is empty. If the Tx FIFO is not empty, the master immediately tries to start a new transfer by issuing a START and arbitrating for the bus. - 0 - STOP is not issued after this byte, regardless of whether or not the Tx FIFO is empty. If the Tx FIFO is not empty, the master continues the current transfer by sending/receiving data bytes according to the value of the CMD bit. If the Tx FIFO is empty, the master holds the SCL line low and stalls the bus until a new command is available in the Tx FIFO. Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum STOP_A {
     #[doc = "0: Don't Issue STOP after this command"]
     DISABLE = 0,
@@ -187,7 +187,7 @@ pub type RESTART_R = crate::BitReader<RESTART_A>;
  Reset value: 0x0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RESTART_A {
     #[doc = "0: Don't Issue RESTART before this command"]
     DISABLE = 0,
@@ -271,7 +271,7 @@ pub type FIRST_DATA_BYTE_R = crate::BitReader<FIRST_DATA_BYTE_A>;
 (offset 0x11) if not interested in FIRST_DATA_BYTE status.  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum FIRST_DATA_BYTE_A {
     #[doc = "0: Sequential data byte received"]
     INACTIVE = 0,

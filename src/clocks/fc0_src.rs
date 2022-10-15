@@ -39,7 +39,7 @@ pub type FC0_SRC_R = crate::FieldReader<u8, FC0_SRC_A>;
 #[doc = "  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum FC0_SRC_A {
     #[doc = "0: `0`"]

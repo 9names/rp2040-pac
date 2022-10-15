@@ -55,7 +55,7 @@ pub type TMOD_R = crate::FieldReader<u8, TMOD_A>;
 #[doc = "Transfer mode  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum TMOD_A {
     #[doc = "0: Both transmit and receive"]
@@ -155,7 +155,7 @@ pub type SPI_FRF_R = crate::FieldReader<u8, SPI_FRF_A>;
 #[doc = "SPI frame format  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum SPI_FRF_A {
     #[doc = "0: Standard 1-bit SPI frame format; 1 bit per SCK, full-duplex"]

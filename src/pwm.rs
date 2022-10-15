@@ -19,7 +19,7 @@ pub struct RegisterBlock {
     pub ints: INTS,
 }
 #[doc = "Cluster CH%s, containing CH*_CC, CH*_CSR, CH*_CTR, CH*_DIV, CH*_TOP"]
-pub use self::ch::CH;
+pub use ch::CH;
 #[doc = r"Cluster"]
 #[doc = "Cluster CH%s, containing CH*_CC, CH*_CSR, CH*_CTR, CH*_DIV, CH*_TOP"]
 pub mod ch;

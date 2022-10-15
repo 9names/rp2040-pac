@@ -53,7 +53,7 @@ pub type FREQ_RANGE_R = crate::FieldReader<u16, FREQ_RANGE_A>;
  Note: the values here are gray coded which is why HIGH comes before TOOHIGH  
 
 Value on reset: 2720"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u16)]
 pub enum FREQ_RANGE_A {
     #[doc = "4004: `111110100100`"]
@@ -145,7 +145,7 @@ pub type ENABLE_R = crate::FieldReader<u16, ENABLE_A>;
  The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator.  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u16)]
 pub enum ENABLE_A {
     #[doc = "3358: `110100011110`"]

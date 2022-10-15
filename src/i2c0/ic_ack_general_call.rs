@@ -39,7 +39,7 @@ pub type ACK_GEN_CALL_R = crate::BitReader<ACK_GEN_CALL_A>;
 #[doc = "ACK General Call. When set to 1, DW_apb_i2c responds with a ACK (by asserting ic_data_oe) when it receives a General Call. Otherwise, DW_apb_i2c responds with a NACK (by negating ic_data_oe).  
 
 Value on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ACK_GEN_CALL_A {
     #[doc = "0: Generate NACK for a General Call"]
     DISABLED = 0,

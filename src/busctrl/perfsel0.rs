@@ -39,7 +39,7 @@ pub type PERFSEL0_R = crate::FieldReader<u8, PERFSEL0_A>;
 #[doc = "Select an event for PERFCTR0. Count either contested accesses, or all accesses, on a downstream port of the main crossbar.  
 
 Value on reset: 31"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum PERFSEL0_A {
     #[doc = "0: `0`"]
