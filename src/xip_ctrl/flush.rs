@@ -39,46 +39,13 @@ impl From<crate::W<FLUSH_SPEC>> for W {
  contents is not affected by flush or reset.)  
  Reading will hold the bus (stall the processor) until the flush  
  completes. Alternatively STAT can be polled until completion."]
-pub struct FLUSH_R(crate::FieldReader<bool, bool>);
-impl FLUSH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FLUSH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FLUSH_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FLUSH_R = crate::BitReader<bool>;
 #[doc = "Field `FLUSH` writer - Write 1 to flush the cache. This clears the tag memory, but  
  the data memory retains its contents. (This means cache-as-SRAM  
  contents is not affected by flush or reset.)  
  Reading will hold the bus (stall the processor) until the flush  
  completes. Alternatively STAT can be polled until completion."]
-pub struct FLUSH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FLUSH_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type FLUSH_W<'a, const O: u8> = crate::BitWriter0C<'a, u32, FLUSH_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Write 1 to flush the cache. This clears the tag memory, but  
  the data memory retains its contents. (This means cache-as-SRAM  
@@ -87,7 +54,7 @@ impl R {
  completes. Alternatively STAT can be polled until completion."]
     #[inline(always)]
     pub fn flush(&self) -> FLUSH_R {
-        FLUSH_R::new((self.bits & 0x01) != 0)
+        FLUSH_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
@@ -97,8 +64,8 @@ impl W {
  Reading will hold the bus (stall the processor) until the flush  
  completes. Alternatively STAT can be polled until completion."]
     #[inline(always)]
-    pub fn flush(&mut self) -> FLUSH_W {
-        FLUSH_W { w: self }
+    pub fn flush(&mut self) -> FLUSH_W<0> {
+        FLUSH_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

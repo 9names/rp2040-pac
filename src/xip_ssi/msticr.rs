@@ -14,25 +14,12 @@ impl From<crate::R<MSTICR_SPEC>> for R {
     }
 }
 #[doc = "Field `MSTICR` reader - Clear-on-read multi-master contention interrupt"]
-pub struct MSTICR_R(crate::FieldReader<bool, bool>);
-impl MSTICR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MSTICR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MSTICR_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MSTICR_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - Clear-on-read multi-master contention interrupt"]
     #[inline(always)]
     pub fn msticr(&self) -> MSTICR_R {
-        MSTICR_R::new((self.bits & 0x01) != 0)
+        MSTICR_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "Multi-master interrupt clear  

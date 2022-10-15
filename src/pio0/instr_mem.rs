@@ -20,22 +20,13 @@ impl From<crate::W<INSTR_MEM_SPEC>> for W {
     }
 }
 #[doc = "Field `INSTR_MEM0` writer - "]
-pub struct INSTR_MEM0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INSTR_MEM0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type INSTR_MEM0_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, INSTR_MEM_SPEC, u16, u16, 16, O>;
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn instr_mem0(&mut self) -> INSTR_MEM0_W {
-        INSTR_MEM0_W { w: self }
+    pub fn instr_mem0(&mut self) -> INSTR_MEM0_W<0> {
+        INSTR_MEM0_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

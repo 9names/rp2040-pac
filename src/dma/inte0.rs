@@ -35,32 +35,9 @@ impl From<crate::W<INTE0_SPEC>> for W {
     }
 }
 #[doc = "Field `INTE0` reader - Set bit n to pass interrupts from channel n to DMA IRQ 0."]
-pub struct INTE0_R(crate::FieldReader<u16, u16>);
-impl INTE0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        INTE0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTE0_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTE0_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `INTE0` writer - Set bit n to pass interrupts from channel n to DMA IRQ 0."]
-pub struct INTE0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INTE0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type INTE0_W<'a, const O: u8> = crate::FieldWriter<'a, u32, INTE0_SPEC, u16, u16, 16, O>;
 impl R {
     #[doc = "Bits 0:15 - Set bit n to pass interrupts from channel n to DMA IRQ 0."]
     #[inline(always)]
@@ -71,8 +48,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Set bit n to pass interrupts from channel n to DMA IRQ 0."]
     #[inline(always)]
-    pub fn inte0(&mut self) -> INTE0_W {
-        INTE0_W { w: self }
+    pub fn inte0(&mut self) -> INTE0_W<0> {
+        INTE0_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

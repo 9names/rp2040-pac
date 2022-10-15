@@ -34,82 +34,36 @@ impl From<crate::W<DIV_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `INT` reader - Integer part of clock divisor."]
-pub struct INT_R(crate::FieldReader<u16, u16>);
-impl INT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        INT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INT_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `INT` writer - Integer part of clock divisor."]
-pub struct INT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xffff << 8)) | ((value as u32 & 0xffff) << 8);
-        self.w
-    }
-}
 #[doc = "Field `FRAC` reader - Fractional part of clock divisor. First-order delta-sigma."]
-pub struct FRAC_R(crate::FieldReader<u8, u8>);
-impl FRAC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FRAC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FRAC_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FRAC_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `FRAC` writer - Fractional part of clock divisor. First-order delta-sigma."]
-pub struct FRAC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FRAC_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type FRAC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIV_SPEC, u8, u8, 8, O>;
+#[doc = "Field `INT` reader - Integer part of clock divisor."]
+pub type INT_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `INT` writer - Integer part of clock divisor."]
+pub type INT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIV_SPEC, u16, u16, 16, O>;
 impl R {
-    #[doc = "Bits 8:23 - Integer part of clock divisor."]
-    #[inline(always)]
-    pub fn int(&self) -> INT_R {
-        INT_R::new(((self.bits >> 8) & 0xffff) as u16)
-    }
     #[doc = "Bits 0:7 - Fractional part of clock divisor. First-order delta-sigma."]
     #[inline(always)]
     pub fn frac(&self) -> FRAC_R {
         FRAC_R::new((self.bits & 0xff) as u8)
     }
-}
-impl W {
     #[doc = "Bits 8:23 - Integer part of clock divisor."]
     #[inline(always)]
-    pub fn int(&mut self) -> INT_W {
-        INT_W { w: self }
+    pub fn int(&self) -> INT_R {
+        INT_R::new(((self.bits >> 8) & 0xffff) as u16)
     }
+}
+impl W {
     #[doc = "Bits 0:7 - Fractional part of clock divisor. First-order delta-sigma."]
     #[inline(always)]
-    pub fn frac(&mut self) -> FRAC_W {
-        FRAC_W { w: self }
+    pub fn frac(&mut self) -> FRAC_W<0> {
+        FRAC_W::new(self)
+    }
+    #[doc = "Bits 8:23 - Integer part of clock divisor."]
+    #[inline(always)]
+    pub fn int(&mut self) -> INT_W<8> {
+        INT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

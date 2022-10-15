@@ -35,32 +35,10 @@ impl From<crate::W<PROC_IN_SYNC_BYPASS_HI_SPEC>> for W {
     }
 }
 #[doc = "Field `PROC_IN_SYNC_BYPASS_HI` reader - "]
-pub struct PROC_IN_SYNC_BYPASS_HI_R(crate::FieldReader<u8, u8>);
-impl PROC_IN_SYNC_BYPASS_HI_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PROC_IN_SYNC_BYPASS_HI_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PROC_IN_SYNC_BYPASS_HI_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PROC_IN_SYNC_BYPASS_HI_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PROC_IN_SYNC_BYPASS_HI` writer - "]
-pub struct PROC_IN_SYNC_BYPASS_HI_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PROC_IN_SYNC_BYPASS_HI_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3f) | (value as u32 & 0x3f);
-        self.w
-    }
-}
+pub type PROC_IN_SYNC_BYPASS_HI_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, PROC_IN_SYNC_BYPASS_HI_SPEC, u8, u8, 6, O>;
 impl R {
     #[doc = "Bits 0:5"]
     #[inline(always)]
@@ -71,8 +49,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
-    pub fn proc_in_sync_bypass_hi(&mut self) -> PROC_IN_SYNC_BYPASS_HI_W {
-        PROC_IN_SYNC_BYPASS_HI_W { w: self }
+    pub fn proc_in_sync_bypass_hi(&mut self) -> PROC_IN_SYNC_BYPASS_HI_W<0> {
+        PROC_IN_SYNC_BYPASS_HI_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -44,20 +44,7 @@ impl From<crate::W<NVIC_ISPR_SPEC>> for W {
  Note: Writing 1 to the NVIC_ISPR bit corresponding to:  
  An interrupt that is pending has no effect.  
  A disabled interrupt sets the state of that interrupt to pending."]
-pub struct SETPEND_R(crate::FieldReader<u32, u32>);
-impl SETPEND_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        SETPEND_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SETPEND_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SETPEND_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SETPEND` writer - Interrupt set-pending bits.  
  Write:  
  0 = No effect.  
@@ -68,17 +55,7 @@ impl core::ops::Deref for SETPEND_R {
  Note: Writing 1 to the NVIC_ISPR bit corresponding to:  
  An interrupt that is pending has no effect.  
  A disabled interrupt sets the state of that interrupt to pending."]
-pub struct SETPEND_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SETPEND_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type SETPEND_W<'a, const O: u8> = crate::FieldWriter<'a, u32, NVIC_ISPR_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31 - Interrupt set-pending bits.  
  Write:  
@@ -107,8 +84,8 @@ impl W {
  An interrupt that is pending has no effect.  
  A disabled interrupt sets the state of that interrupt to pending."]
     #[inline(always)]
-    pub fn setpend(&mut self) -> SETPEND_W {
-        SETPEND_W { w: self }
+    pub fn setpend(&mut self) -> SETPEND_W<0> {
+        SETPEND_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

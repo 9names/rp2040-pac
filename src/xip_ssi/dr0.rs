@@ -35,32 +35,9 @@ impl From<crate::W<DR0_SPEC>> for W {
     }
 }
 #[doc = "Field `DR` reader - First data register of 36"]
-pub struct DR_R(crate::FieldReader<u32, u32>);
-impl DR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        DR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DR_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `DR` writer - First data register of 36"]
-pub struct DR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type DR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DR0_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31 - First data register of 36"]
     #[inline(always)]
@@ -71,8 +48,8 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - First data register of 36"]
     #[inline(always)]
-    pub fn dr(&mut self) -> DR_W {
-        DR_W { w: self }
+    pub fn dr(&mut self) -> DR_W<0> {
+        DR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

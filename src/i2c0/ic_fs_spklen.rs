@@ -36,33 +36,11 @@ impl From<crate::W<IC_FS_SPKLEN_SPEC>> for W {
 }
 #[doc = "Field `IC_FS_SPKLEN` reader - This register must be set before any I2C bus transaction can take place to ensure stable operation. This register sets the duration, measured in ic_clk cycles, of the longest spike in the SCL or SDA lines that will be filtered out by the spike suppression logic. This register can be written only when the I2C interface is disabled which corresponds to the IC_ENABLE\\[0\\]
 register being set to 0. Writes at other times have no effect. The minimum valid value is 1; hardware prevents values less than this being written, and if attempted results in 1 being set. or more information, refer to 'Spike Suppression'."]
-pub struct IC_FS_SPKLEN_R(crate::FieldReader<u8, u8>);
-impl IC_FS_SPKLEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        IC_FS_SPKLEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IC_FS_SPKLEN_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IC_FS_SPKLEN_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `IC_FS_SPKLEN` writer - This register must be set before any I2C bus transaction can take place to ensure stable operation. This register sets the duration, measured in ic_clk cycles, of the longest spike in the SCL or SDA lines that will be filtered out by the spike suppression logic. This register can be written only when the I2C interface is disabled which corresponds to the IC_ENABLE\\[0\\]
 register being set to 0. Writes at other times have no effect. The minimum valid value is 1; hardware prevents values less than this being written, and if attempted results in 1 being set. or more information, refer to 'Spike Suppression'."]
-pub struct IC_FS_SPKLEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IC_FS_SPKLEN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type IC_FS_SPKLEN_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, IC_FS_SPKLEN_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - This register must be set before any I2C bus transaction can take place to ensure stable operation. This register sets the duration, measured in ic_clk cycles, of the longest spike in the SCL or SDA lines that will be filtered out by the spike suppression logic. This register can be written only when the I2C interface is disabled which corresponds to the IC_ENABLE\\[0\\]
 register being set to 0. Writes at other times have no effect. The minimum valid value is 1; hardware prevents values less than this being written, and if attempted results in 1 being set. or more information, refer to 'Spike Suppression'."]
@@ -75,8 +53,8 @@ impl W {
     #[doc = "Bits 0:7 - This register must be set before any I2C bus transaction can take place to ensure stable operation. This register sets the duration, measured in ic_clk cycles, of the longest spike in the SCL or SDA lines that will be filtered out by the spike suppression logic. This register can be written only when the I2C interface is disabled which corresponds to the IC_ENABLE\\[0\\]
 register being set to 0. Writes at other times have no effect. The minimum valid value is 1; hardware prevents values less than this being written, and if attempted results in 1 being set. or more information, refer to 'Spike Suppression'."]
     #[inline(always)]
-    pub fn ic_fs_spklen(&mut self) -> IC_FS_SPKLEN_W {
-        IC_FS_SPKLEN_W { w: self }
+    pub fn ic_fs_spklen(&mut self) -> IC_FS_SPKLEN_W<0> {
+        IC_FS_SPKLEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -16,20 +16,7 @@ impl From<crate::R<IC_RXFLR_SPEC>> for R {
 #[doc = "Field `RXFLR` reader - Receive FIFO Level. Contains the number of valid data entries in the receive FIFO.  
 
  Reset value: 0x0"]
-pub struct RXFLR_R(crate::FieldReader<u8, u8>);
-impl RXFLR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RXFLR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RXFLR_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RXFLR_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:4 - Receive FIFO Level. Contains the number of valid data entries in the receive FIFO.  
 

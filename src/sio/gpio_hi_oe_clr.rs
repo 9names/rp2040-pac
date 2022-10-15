@@ -20,22 +20,13 @@ impl From<crate::W<GPIO_HI_OE_CLR_SPEC>> for W {
     }
 }
 #[doc = "Field `GPIO_HI_OE_CLR` writer - Perform an atomic bit-clear on GPIO_HI_OE, i.e. `GPIO_HI_OE &= ~wdata`"]
-pub struct GPIO_HI_OE_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPIO_HI_OE_CLR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3f) | (value as u32 & 0x3f);
-        self.w
-    }
-}
+pub type GPIO_HI_OE_CLR_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, GPIO_HI_OE_CLR_SPEC, u8, u8, 6, O>;
 impl W {
     #[doc = "Bits 0:5 - Perform an atomic bit-clear on GPIO_HI_OE, i.e. `GPIO_HI_OE &= ~wdata`"]
     #[inline(always)]
-    pub fn gpio_hi_oe_clr(&mut self) -> GPIO_HI_OE_CLR_W {
-        GPIO_HI_OE_CLR_W { w: self }
+    pub fn gpio_hi_oe_clr(&mut self) -> GPIO_HI_OE_CLR_W<0> {
+        GPIO_HI_OE_CLR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

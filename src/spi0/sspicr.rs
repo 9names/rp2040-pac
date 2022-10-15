@@ -34,102 +34,36 @@ impl From<crate::W<SSPICR_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `RTIC` reader - Clears the SSPRTINTR interrupt"]
-pub struct RTIC_R(crate::FieldReader<bool, bool>);
-impl RTIC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTIC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTIC_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `RTIC` writer - Clears the SSPRTINTR interrupt"]
-pub struct RTIC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTIC_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
 #[doc = "Field `RORIC` reader - Clears the SSPRORINTR interrupt"]
-pub struct RORIC_R(crate::FieldReader<bool, bool>);
-impl RORIC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RORIC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RORIC_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RORIC_R = crate::BitReader<bool>;
 #[doc = "Field `RORIC` writer - Clears the SSPRORINTR interrupt"]
-pub struct RORIC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RORIC_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type RORIC_W<'a, const O: u8> = crate::BitWriter1C<'a, u32, SSPICR_SPEC, bool, O>;
+#[doc = "Field `RTIC` reader - Clears the SSPRTINTR interrupt"]
+pub type RTIC_R = crate::BitReader<bool>;
+#[doc = "Field `RTIC` writer - Clears the SSPRTINTR interrupt"]
+pub type RTIC_W<'a, const O: u8> = crate::BitWriter1C<'a, u32, SSPICR_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 1 - Clears the SSPRTINTR interrupt"]
-    #[inline(always)]
-    pub fn rtic(&self) -> RTIC_R {
-        RTIC_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
     #[doc = "Bit 0 - Clears the SSPRORINTR interrupt"]
     #[inline(always)]
     pub fn roric(&self) -> RORIC_R {
-        RORIC_R::new((self.bits & 0x01) != 0)
+        RORIC_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Clears the SSPRTINTR interrupt"]
+    #[inline(always)]
+    pub fn rtic(&self) -> RTIC_R {
+        RTIC_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 1 - Clears the SSPRTINTR interrupt"]
-    #[inline(always)]
-    pub fn rtic(&mut self) -> RTIC_W {
-        RTIC_W { w: self }
-    }
     #[doc = "Bit 0 - Clears the SSPRORINTR interrupt"]
     #[inline(always)]
-    pub fn roric(&mut self) -> RORIC_W {
-        RORIC_W { w: self }
+    pub fn roric(&mut self) -> RORIC_W<0> {
+        RORIC_W::new(self)
+    }
+    #[doc = "Bit 1 - Clears the SSPRTINTR interrupt"]
+    #[inline(always)]
+    pub fn rtic(&mut self) -> RTIC_W<1> {
+        RTIC_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

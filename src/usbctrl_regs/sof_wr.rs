@@ -20,22 +20,12 @@ impl From<crate::W<SOF_WR_SPEC>> for W {
     }
 }
 #[doc = "Field `COUNT` writer - "]
-pub struct COUNT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> COUNT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07ff) | (value as u32 & 0x07ff);
-        self.w
-    }
-}
+pub type COUNT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SOF_WR_SPEC, u16, u16, 11, O>;
 impl W {
     #[doc = "Bits 0:10"]
     #[inline(always)]
-    pub fn count(&mut self) -> COUNT_W {
-        COUNT_W { w: self }
+    pub fn count(&mut self) -> COUNT_W<0> {
+        COUNT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

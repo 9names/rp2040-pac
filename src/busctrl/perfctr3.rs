@@ -37,34 +37,11 @@ impl From<crate::W<PERFCTR3_SPEC>> for W {
 #[doc = "Field `PERFCTR3` reader - Busfabric saturating performance counter 3  
  Count some event signal from the busfabric arbiters.  
  Write any value to clear. Select an event to count using PERFSEL3"]
-pub struct PERFCTR3_R(crate::FieldReader<u32, u32>);
-impl PERFCTR3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        PERFCTR3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PERFCTR3_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PERFCTR3_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `PERFCTR3` writer - Busfabric saturating performance counter 3  
  Count some event signal from the busfabric arbiters.  
  Write any value to clear. Select an event to count using PERFSEL3"]
-pub struct PERFCTR3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PERFCTR3_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x00ff_ffff) | (value as u32 & 0x00ff_ffff);
-        self.w
-    }
-}
+pub type PERFCTR3_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PERFCTR3_SPEC, u32, u32, 24, O>;
 impl R {
     #[doc = "Bits 0:23 - Busfabric saturating performance counter 3  
  Count some event signal from the busfabric arbiters.  
@@ -79,8 +56,8 @@ impl W {
  Count some event signal from the busfabric arbiters.  
  Write any value to clear. Select an event to count using PERFSEL3"]
     #[inline(always)]
-    pub fn perfctr3(&mut self) -> PERFCTR3_W {
-        PERFCTR3_W { w: self }
+    pub fn perfctr3(&mut self) -> PERFCTR3_W<0> {
+        PERFCTR3_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -14,25 +14,12 @@ impl From<crate::R<RANDOMBIT_SPEC>> for R {
     }
 }
 #[doc = "Field `RANDOMBIT` reader - "]
-pub struct RANDOMBIT_R(crate::FieldReader<bool, bool>);
-impl RANDOMBIT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RANDOMBIT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RANDOMBIT_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RANDOMBIT_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn randombit(&self) -> RANDOMBIT_R {
-        RANDOMBIT_R::new((self.bits & 0x01) != 0)
+        RANDOMBIT_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "This just reads the state of the oscillator output so randomness is compromised if the ring oscillator is stopped or run at a harmonic of the bus frequency  

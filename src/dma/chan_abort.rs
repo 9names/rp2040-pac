@@ -37,34 +37,12 @@ impl From<crate::W<CHAN_ABORT_SPEC>> for W {
 #[doc = "Field `CHAN_ABORT` reader - Each bit corresponds to a channel. Writing a 1 aborts whatever transfer sequence is in progress on that channel. The bit will remain high until any in-flight transfers have been flushed through the address and data FIFOs.  
 
  After writing, this register must be polled until it returns all-zero. Until this point, it is unsafe to restart the channel."]
-pub struct CHAN_ABORT_R(crate::FieldReader<u16, u16>);
-impl CHAN_ABORT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        CHAN_ABORT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CHAN_ABORT_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CHAN_ABORT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `CHAN_ABORT` writer - Each bit corresponds to a channel. Writing a 1 aborts whatever transfer sequence is in progress on that channel. The bit will remain high until any in-flight transfers have been flushed through the address and data FIFOs.  
 
  After writing, this register must be polled until it returns all-zero. Until this point, it is unsafe to restart the channel."]
-pub struct CHAN_ABORT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CHAN_ABORT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type CHAN_ABORT_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CHAN_ABORT_SPEC, u16, u16, 16, O>;
 impl R {
     #[doc = "Bits 0:15 - Each bit corresponds to a channel. Writing a 1 aborts whatever transfer sequence is in progress on that channel. The bit will remain high until any in-flight transfers have been flushed through the address and data FIFOs.  
 
@@ -79,8 +57,8 @@ impl W {
 
  After writing, this register must be polled until it returns all-zero. Until this point, it is unsafe to restart the channel."]
     #[inline(always)]
-    pub fn chan_abort(&mut self) -> CHAN_ABORT_W {
-        CHAN_ABORT_W { w: self }
+    pub fn chan_abort(&mut self) -> CHAN_ABORT_W<0> {
+        CHAN_ABORT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

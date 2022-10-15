@@ -39,36 +39,13 @@ impl From<crate::W<GPIO_OUT_SPEC>> for W {
  If core 0 and core 1 both write to GPIO_OUT simultaneously (or to a SET/CLR/XOR alias),  
  the result is as though the write from core 0 took place first,  
  and the write from core 1 was then applied to that intermediate result."]
-pub struct GPIO_OUT_R(crate::FieldReader<u32, u32>);
-impl GPIO_OUT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        GPIO_OUT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPIO_OUT_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPIO_OUT_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `GPIO_OUT` writer - Set output level (1/0 -> high/low) for GPIO0...29.  
  Reading back gives the last value written, NOT the input value from the pins.  
  If core 0 and core 1 both write to GPIO_OUT simultaneously (or to a SET/CLR/XOR alias),  
  the result is as though the write from core 0 took place first,  
  and the write from core 1 was then applied to that intermediate result."]
-pub struct GPIO_OUT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPIO_OUT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3fff_ffff) | (value as u32 & 0x3fff_ffff);
-        self.w
-    }
-}
+pub type GPIO_OUT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GPIO_OUT_SPEC, u32, u32, 30, O>;
 impl R {
     #[doc = "Bits 0:29 - Set output level (1/0 -> high/low) for GPIO0...29.  
  Reading back gives the last value written, NOT the input value from the pins.  
@@ -87,8 +64,8 @@ impl W {
  the result is as though the write from core 0 took place first,  
  and the write from core 1 was then applied to that intermediate result."]
     #[inline(always)]
-    pub fn gpio_out(&mut self) -> GPIO_OUT_W {
-        GPIO_OUT_W { w: self }
+    pub fn gpio_out(&mut self) -> GPIO_OUT_W<0> {
+        GPIO_OUT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -34,102 +34,36 @@ impl From<crate::W<DBGPAUSE_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `DBG1` reader - Pause when processor 1 is in debug mode"]
-pub struct DBG1_R(crate::FieldReader<bool, bool>);
-impl DBG1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DBG1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DBG1_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `DBG1` writer - Pause when processor 1 is in debug mode"]
-pub struct DBG1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DBG1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
-        self.w
-    }
-}
 #[doc = "Field `DBG0` reader - Pause when processor 0 is in debug mode"]
-pub struct DBG0_R(crate::FieldReader<bool, bool>);
-impl DBG0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DBG0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DBG0_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DBG0_R = crate::BitReader<bool>;
 #[doc = "Field `DBG0` writer - Pause when processor 0 is in debug mode"]
-pub struct DBG0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DBG0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
+pub type DBG0_W<'a, const O: u8> = crate::BitWriter<'a, u32, DBGPAUSE_SPEC, bool, O>;
+#[doc = "Field `DBG1` reader - Pause when processor 1 is in debug mode"]
+pub type DBG1_R = crate::BitReader<bool>;
+#[doc = "Field `DBG1` writer - Pause when processor 1 is in debug mode"]
+pub type DBG1_W<'a, const O: u8> = crate::BitWriter<'a, u32, DBGPAUSE_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 2 - Pause when processor 1 is in debug mode"]
-    #[inline(always)]
-    pub fn dbg1(&self) -> DBG1_R {
-        DBG1_R::new(((self.bits >> 2) & 0x01) != 0)
-    }
     #[doc = "Bit 1 - Pause when processor 0 is in debug mode"]
     #[inline(always)]
     pub fn dbg0(&self) -> DBG0_R {
-        DBG0_R::new(((self.bits >> 1) & 0x01) != 0)
+        DBG0_R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - Pause when processor 1 is in debug mode"]
+    #[inline(always)]
+    pub fn dbg1(&self) -> DBG1_R {
+        DBG1_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 2 - Pause when processor 1 is in debug mode"]
-    #[inline(always)]
-    pub fn dbg1(&mut self) -> DBG1_W {
-        DBG1_W { w: self }
-    }
     #[doc = "Bit 1 - Pause when processor 0 is in debug mode"]
     #[inline(always)]
-    pub fn dbg0(&mut self) -> DBG0_W {
-        DBG0_W { w: self }
+    pub fn dbg0(&mut self) -> DBG0_W<1> {
+        DBG0_W::new(self)
+    }
+    #[doc = "Bit 2 - Pause when processor 1 is in debug mode"]
+    #[inline(always)]
+    pub fn dbg1(&mut self) -> DBG1_W<2> {
+        DBG1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
